@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adaline Scroll Animation | Codegrid</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-spacer" aria-hidden="true"></div>
+      <div class="logo">
+        <a href="#"><img src="/cyc-logo.png" alt="CYC" /></a>
+      </div>
+      <div class="nav-buttons">
+        <div class="btn primary"><a href="#">Prueba en sitio</a></div>
+        <div class="btn secondary"><a href="#">Contactanos</a></div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <canvas></canvas>
+
+      <div class="hero-content">
+        <div class="header">
+          <h1>Tecnología aplicada al agua, al campo y al medio ambiente</h1>
+          <p>Dos soluciones especializadas trabajando en una sola dirección:</p>
+          <div class="client-logos">
+            <div class="client-logo client-logo-cluedrop">
+              <img src="/cluedrop-logo.png" alt="Cluedrop" />
+            </div>
+            <div class="client-logo client-logo-greendrone">
+              <img src="/greendrone-logo.png" alt="Greendrone" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-img-container">
+        <div class="hero-img">
+          <iframe
+            src="https://www.youtube.com/embed/e7vz3lxlP-Q?controls=1&rel=0"
+            title="CYC video"
+            loading="eager"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="sector-selector">
+      <div class="sector-selector-inner">
+        <div class="sector-eyebrow reveal">Pregunta</div>
+        <p class="sector-kicker reveal">
+          Personaliza el orden del recorrido según tu giro comercial.
+        </p>
+        <h2 class="reveal">¿De qué sección comercial perteneces?</h2>
+        <div class="sector-options">
+          <button class="sector-option is-active reveal" type="button" data-sector="restaurante">
+            Restaurante
+          </button>
+          <button class="sector-option reveal" type="button" data-sector="agropecuario">
+            Agropecuario
+          </button>
+          <button class="sector-option reveal" type="button" data-sector="hoteleria">
+            Hotelería
+          </button>
+          <button class="sector-option reveal" type="button" data-sector="otro">
+            Otro
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="dynamic-sections" id="dynamic-sections">
+      <section
+        class="feature-section reveal-section"
+        data-section-id="1"
+        data-video-src="/altozano.mp4"
+      >
+        <div class="feature-grid">
+          <div class="feature-copy">
+            <div class="feature-brand">
+              <img src="/cluedrop-logo.png" alt="Blue Drop" />
+            </div>
+            <div class="feature-step is-active">
+              <h3>Blue Drop</h3>
+              <p>
+                Solución especializada para el tratamiento, rehabilitación y mantenimiento de
+                cuerpos de agua.
+              </p>
+            </div>
+            <div class="feature-step">
+              <h3>Intervención técnica en entornos acuáticos</h3>
+              <p>
+                Blue Drop está diseñado para intervenir de forma eficiente en aguas residuales,
+                lagos, sistemas hidráulicos y entornos acuáticos que requieren control técnico,
+                recuperación y estabilidad operativa.
+              </p>
+            </div>
+            <div class="feature-step">
+              <h3>Mejora continua de la calidad del agua</h3>
+              <p>
+                A través de procesos optimizados y productos de alta eficacia, permite mejorar la
+                calidad del agua, reducir contaminantes y mantener condiciones adecuadas para su
+                uso, reintegración o conservación.
+              </p>
+            </div>
+          </div>
+          <div class="feature-media">
+            <video class="feature-video" muted loop playsinline preload="metadata">
+              <source src="/altozano.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="feature-section reveal-section"
+        data-section-id="2"
+        data-video-src="/Grease_Trap.mp4"
+      >
+        <div class="feature-grid">
+          <div class="feature-copy">
+            <div class="feature-brand">
+              <img src="/cluedrop-logo.png" alt="Blue Drop" />
+            </div>
+            <div class="feature-step is-active">
+              <h3>Eliminamos grasa, obstrucciones y malos olores desde el origen.</h3>
+              <p>
+                Blue Drop está diseñado para el tratamiento de trampas de grasa en restaurantes,
+                cocinas industriales y sistemas de drenaje, ayudando a descomponer residuos
+                acumulados y prevenir saturaciones.
+              </p>
+            </div>
+            <div class="feature-step">
+              <h3>Tratamiento eficiente para trampas y drenajes</h3>
+              <p>
+                Su formulación actúa directamente sobre la acumulación orgánica para facilitar el
+                mantenimiento y evitar bloqueos operativos en puntos críticos del sistema.
+              </p>
+            </div>
+            <div class="feature-step">
+              <h3>Sistema limpio, funcional y en condiciones óptimas</h3>
+              <p>
+                Su aplicación reduce significativamente los malos olores y mantiene el sistema
+                limpio, funcional y en condiciones óptimas.
+              </p>
+            </div>
+          </div>
+          <div class="feature-media">
+            <video class="feature-video" muted loop playsinline preload="metadata">
+              <source src="/Grease_Trap.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="feature-section reveal-section"
+        data-section-id="3"
+        data-video-src=""
+      >
+        <div class="feature-grid">
+          <div class="feature-copy">
+            <p class="feature-kicker">Sección 3</p>
+            <div class="feature-step is-active">
+              <h3>Automatización por etapas del servicio</h3>
+              <p>La columna izquierda puede dividir una narrativa compleja en mensajes cortos y sincronizados.</p>
+            </div>
+            <div class="feature-step">
+              <h3>Interacción entre personas, sistema y operación</h3>
+              <p>Este segundo momento puede responder a cómo se usa la solución dentro del día a día.</p>
+            </div>
+            <div class="feature-step">
+              <h3>Resultados visibles y continuidad del flujo</h3>
+              <p>El tercer bloque deja lista la conexión hacia otra solución o a un CTA posterior.</p>
+            </div>
+          </div>
+          <div class="feature-media">
+            <video class="feature-video" muted loop playsinline preload="metadata"></video>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="feature-section reveal-section"
+        data-section-id="4"
+        data-video-src=""
+      >
+        <div class="feature-grid">
+          <div class="feature-copy">
+            <p class="feature-kicker">Sección 4</p>
+            <div class="feature-step is-active">
+              <h3>Resumen final de la experiencia comercial</h3>
+              <p>Esta cuarta sección queda lista para otro tema, otro set de frames y otra narrativa.</p>
+            </div>
+            <div class="feature-step">
+              <h3>Profundización por industria o segmento</h3>
+              <p>La estructura ya soporta textos distintos por scroll sin afectar el reordenamiento general.</p>
+            </div>
+            <div class="feature-step">
+              <h3>Puente hacia contacto, demo o conversión</h3>
+              <p>Puedes cerrar con un mensaje orientado a acción después del último tramo de la secuencia.</p>
+            </div>
+          </div>
+          <div class="feature-media">
+            <video class="feature-video" muted loop playsinline preload="metadata"></video>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>

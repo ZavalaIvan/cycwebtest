@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adaline Scroll Animation | Codegrid</title>
+    <script type="module" crossorigin src="/assets/index-CSYocv3H.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CV3nXSZO.css">
+  </head>
+  <body>
+    <nav class="site-nav">
+      <div class="nav-shell">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <div class="mega-menu-overlay">
+        <div class="mega-menu-shell">
+          <div class="mega-menu-header">
+            <button class="mega-menu-close" type="button" aria-label="Cerrar menú">Cerrar</button>
+          </div>
+
+          <div class="mega-menu-nav">
+            <button class="nav-link has-mega-menu is-active" type="button" data-menu="soluciones">
+              Soluciones
+            </button>
+            <button class="nav-link has-mega-menu" type="button" data-menu="sectores">
+              Sectores
+            </button>
+            <button class="nav-link has-mega-menu" type="button" data-menu="recursos">
+              Recursos
+            </button>
+            <a class="nav-link mega-menu-contact" href="#">Contacto</a>
+          </div>
+
+          <div class="mega-menu is-open" data-panel="soluciones">
+            <div class="mega-menu-grid">
+              <div class="mega-menu-copy">
+                <p class="mega-menu-kicker">Soluciones</p>
+                <h3>Tecnología aplicada al agua, mantenimiento y trabajo en campo.</h3>
+                <p>
+                  Explora nuestras líneas especializadas para resolver desafíos operativos con Blue Drop
+                  y Green Drone.
+                </p>
+                <div class="mega-menu-media">
+                  <img src="/altozano-frames/altozano001.jpg" alt="Soluciones CyC" />
+                </div>
+              </div>
+              <div class="mega-menu-media">
+                <img src="/altozano-frames/altozano003.jpg" alt="Sectores atendidos por CyC" />
+              </div>
+              <div class="mega-menu-media">
+                <img src="/altozano-frames/altozano005.jpg" alt="Recursos y contenidos tecnicos" />
+              </div>
+              <div class="mega-menu-column">
+                <p class="mega-menu-title">Blue Drop</p>
+                <a href="#">Tratamiento de agua</a>
+                <a href="#">Rehabilitación de cuerpos de agua</a>
+                <a href="#">Trampas de grasa y drenajes</a>
+              </div>
+              <div class="mega-menu-column">
+                <p class="mega-menu-title">Green Drone</p>
+                <a href="#">Agricultura de precisión</a>
+                <a href="#">Fumigación y fertilización aérea</a>
+                <a href="#">Mapeo y levantamientos técnicos</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="mega-menu" data-panel="sectores">
+            <div class="mega-menu-grid">
+              <div class="mega-menu-copy">
+                <p class="mega-menu-kicker">Sectores</p>
+                <h3>Soluciones adaptadas al contexto real de cada operación.</h3>
+                <p>
+                  Seleccionamos la estrategia adecuada según el tipo de industria, operación o terreno.
+                </p>
+              </div>
+              <div class="mega-menu-column">
+                <p class="mega-menu-title">Comercial</p>
+                <a href="#">Restaurantes</a>
+                <a href="#">Hotelería</a>
+                <a href="#">Mantenimiento de instalaciones</a>
+              </div>
+              <div class="mega-menu-column">
+                <p class="mega-menu-title">Campo y agua</p>
+                <a href="#">Agropecuario</a>
+                <a href="#">Monitoreo en campo</a>
+                <a href="#">Operaciones hidráulicas</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="mega-menu" data-panel="recursos">
+            <div class="mega-menu-grid">
+              <div class="mega-menu-copy">
+                <p class="mega-menu-kicker">Recursos</p>
+                <h3>Contenido técnico para entender mejor cada solución.</h3>
+                <p>
+                  Revisa artículos, preguntas frecuentes y contenidos diseñados para orientar tu decisión.
+                </p>
+              </div>
+              <div class="mega-menu-column">
+                <p class="mega-menu-title">Contenido</p>
+                <a href="#">Blog técnico</a>
+                <a href="#">Casos prácticos</a>
+                <a href="#">Guías por sector</a>
+              </div>
+              <div class="mega-menu-column">
+                <p class="mega-menu-title">Ayuda</p>
+                <a href="#">Preguntas frecuentes</a>
+                <a href="#">Solicitar asesoría</a>
+                <a href="#">Agendar llamada</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <canvas></canvas>
+
+      <div class="hero-content">
+        <div class="header">
+          <div class="hero-brand">
+            <img src="/cyc-logo.png" alt="CyC del Sureste" />
+          </div>
+          <h1>Tecnología aplicada al agua, al campo y al medio ambiente</h1>
+          <p>Dos soluciones especializadas trabajando en una sola dirección:</p>
+          <div class="client-logos">
+            <div class="client-logo client-logo-cluedrop">
+              <img src="/cluedrop-logo.png" alt="Cluedrop" />
+            </div>
+            <div class="client-logo client-logo-greendrone">
+              <img src="/greendrone-logo.png" alt="Greendrone" />
+            </div>
+          </div>
+          <div class="hero-actions">
+            <div class="btn primary"><a href="#">Prueba en sitio</a></div>
+            <div class="btn secondary"><a href="#">Contactanos</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-img-container">
+        <div class="hero-img">
+          <iframe
+            src="https://www.youtube.com/embed/e7vz3lxlP-Q?controls=1&rel=0"
+            title="CYC video"
+            loading="eager"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="sector-selector">
+      <div class="sector-selector-inner">
+        <div class="journey-copy">
+          <h2 class="reveal">¿De qué sección comercial perteneces?</h2>
+          <p class="sector-kicker reveal">
+            Descubre soluciones para tratamiento de agua, mantenimiento de sistemas y tecnología
+            ambiental según el sector comercial de tu empresa.
+          </p>
+        </div>
+        <div class="sector-options">
+          <button class="sector-option is-active reveal" type="button" data-sector="restaurante">
+            Restaurante
+          </button>
+          <button class="sector-option reveal" type="button" data-sector="agropecuario">
+            Agropecuario
+          </button>
+          <button class="sector-option reveal" type="button" data-sector="hoteleria">
+            Hotelería
+          </button>
+          <button class="sector-option reveal" type="button" data-sector="otro">
+            Otro
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="dynamic-sections" id="dynamic-sections">
+      <section
+        class="feature-section reveal-section"
+        data-section-id="1"
+        data-video-src="/altozano.mp4"
+      >
+        <div class="feature-grid">
+          <div class="feature-copy">
+            <div class="feature-brand">
+              <img src="/cluedrop-logo.png" alt="Blue Drop" />
+            </div>
+            <div class="feature-step is-active">
+              <h3>Blue Drop</h3>
+              <p>
+                Solución especializada para el tratamiento, rehabilitación y mantenimiento de
+                cuerpos de agua.
+              </p>
+            </div>
+            <div class="feature-step">
+              <h3>Intervención técnica en entornos acuáticos</h3>
+              <p>
+                Blue Drop está diseñado para intervenir de forma eficiente en aguas residuales,
+                lagos, sistemas hidráulicos y entornos acuáticos que requieren control técnico,
+                recuperación y estabilidad operativa.
+              </p>
+            </div>
+            <div class="feature-step">
+              <h3>Mejora continua de la calidad del agua</h3>
+              <p>
+                A través de procesos optimizados y productos de alta eficacia, permite mejorar la
+                calidad del agua, reducir contaminantes y mantener condiciones adecuadas para su
+                uso, reintegración o conservación.
+              </p>
+            </div>
+          </div>
+          <div class="feature-media">
+            <video class="feature-video" muted loop playsinline preload="metadata">
+              <source src="/altozano.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="feature-section reveal-section"
+        data-section-id="2"
+        data-video-src="/Grease_Trap.mp4"
+      >
+        <div class="feature-grid">
+          <div class="feature-copy">
+            <div class="feature-brand">
+              <img src="/cluedrop-logo.png" alt="Blue Drop" />
+            </div>
+            <div class="feature-step is-active">
+              <h3>Eliminamos grasa, obstrucciones y malos olores desde el origen.</h3>
+              <p>
+                Blue Drop está diseñado para el tratamiento de trampas de grasa en restaurantes,
+                cocinas industriales y sistemas de drenaje, ayudando a descomponer residuos
+                acumulados y prevenir saturaciones.
+              </p>
+            </div>
+            <div class="feature-step">
+              <h3>Tratamiento eficiente para trampas y drenajes</h3>
+              <p>
+                Su formulación actúa directamente sobre la acumulación orgánica para facilitar el
+                mantenimiento y evitar bloqueos operativos en puntos críticos del sistema.
+              </p>
+            </div>
+            <div class="feature-step">
+              <h3>Sistema limpio, funcional y en condiciones óptimas</h3>
+              <p>
+                Su aplicación reduce significativamente los malos olores y mantiene el sistema
+                limpio, funcional y en condiciones óptimas.
+              </p>
+            </div>
+          </div>
+          <div class="feature-media">
+            <video class="feature-video" muted loop playsinline preload="metadata">
+              <source src="/Grease_Trap.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="feature-section reveal-section"
+        data-section-id="3"
+        data-video-src=""
+      >
+        <div class="feature-grid">
+          <div class="feature-copy">
+            <div class="feature-brand">
+              <img src="/greendrone-logo.png" alt="Green Drone" />
+            </div>
+            <div class="feature-step is-active">
+              <h3>Green Drone</h3>
+              <p>Tecnología aérea aplicada para optimizar procesos en campo.</p>
+            </div>
+            <div class="feature-step">
+              <h3>Aplicación técnica con drones especializados</h3>
+              <p>
+                Green Drone utiliza drones especializados para realizar aplicaciones precisas en
+                agricultura, monitoreo y levantamientos técnicos, permitiendo intervenir grandes
+                superficies de forma eficiente, controlada y con menor impacto operativo.
+              </p>
+            </div>
+            <div class="feature-step">
+              <h3>Decisiones más precisas y mejor cobertura operativa</h3>
+              <p>
+                Su uso mejora la cobertura, reduce tiempos de ejecución y permite tomar decisiones
+                basadas en datos reales del terreno.
+              </p>
+              <p>
+                Fumigación y fertilización aérea<br />
+                Agricultura de precisión<br />
+                Monitoreo y análisis de cultivos<br />
+                Levantamientos y mapeo de terreno<br />
+                Cobertura eficiente en grandes superficies
+              </p>
+            </div>
+          </div>
+          <div class="feature-media">
+            <video class="feature-video" muted loop playsinline preload="metadata"></video>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="feature-section reveal-section"
+        data-section-id="4"
+        data-video-src=""
+      >
+        <div class="feature-grid">
+          <div class="feature-copy">
+            <p class="feature-kicker">Cierre</p>
+            <div class="feature-step is-active">
+              <h3>Estamos listos para ayudarte a resolverlo</h3>
+              <p>
+                Si tu operación enfrenta desafíos en agua, mantenimiento o trabajo en campo, en CyC
+                del Sureste contamos con la tecnología y la experiencia para intervenir de forma
+                eficiente.
+              </p>
+            </div>
+            <div class="feature-step">
+              <h3>Soluciones especializadas para cada frente operativo</h3>
+              <p>
+                A través de Blue Drop y Green Drone, ofrecemos soluciones especializadas que
+                mejoran procesos, optimizan recursos y generan resultados visibles desde la
+                implementación.
+              </p>
+            </div>
+            <div class="feature-step">
+              <h3>Tecnología, experiencia y ejecución en campo</h3>
+              <p>
+                Integramos diagnóstico, intervención y seguimiento para ayudarte a resolver
+                problemas críticos con una respuesta técnica más rápida, precisa y confiable.
+              </p>
+              <div class="feature-cta">
+                <a href="#" class="feature-cta-primary">Solicitar asesoría</a>
+                <a href="#" class="feature-cta-secondary">Hablar con un especialista</a>
+              </div>
+            </div>
+          </div>
+          <div class="feature-media">
+            <video class="feature-video" muted loop playsinline preload="metadata"></video>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="article-carousel-section">
+      <div class="article-carousel-shell">
+        <div class="article-carousel-copy">
+          <p class="article-carousel-kicker reveal">Blog</p>
+          <h2 class="reveal">Artículos sobre tratamiento de agua, drones y soluciones ambientales.</h2>
+          <p class="article-carousel-intro reveal">
+            Contenido técnico y casos prácticos para cada sector.
+          </p>
+        </div>
+
+        <div class="article-carousel reveal">
+          <div class="article-carousel-toolbar">
+            <div class="article-carousel-status">
+              <span class="article-carousel-current">01</span>
+              <span class="article-carousel-divider">/</span>
+              <span class="article-carousel-total">05</span>
+            </div>
+            <div class="article-carousel-controls">
+              <button class="article-carousel-button prev" type="button" aria-label="Artículo anterior">
+                Anterior
+              </button>
+              <button class="article-carousel-button next" type="button" aria-label="Artículo siguiente">
+                Siguiente
+              </button>
+            </div>
+          </div>
+
+          <div class="article-carousel-viewport">
+            <div class="article-carousel-track">
+              <article class="article-card">
+                <p class="article-card-tag">Blue Drop</p>
+                <h3>Cómo rehabilitar cuerpos de agua con intervención técnica especializada</h3>
+                <p>
+                  Una subpágina enfocada en tratamiento de agua, recuperación de lagos y control de
+                  calidad para posicionar servicios clave.
+                </p>
+                <a href="#">Leer artículo</a>
+              </article>
+
+              <article class="article-card">
+                <p class="article-card-tag">Restaurantes</p>
+                <h3>Tratamiento de trampas de grasa y drenajes para operación continua</h3>
+                <p>
+                  Contenido ideal para explicar beneficios, mantenimiento preventivo y reducción de
+                  obstrucciones en cocinas industriales.
+                </p>
+                <a href="#">Ver subpágina</a>
+              </article>
+
+              <article class="article-card">
+                <p class="article-card-tag">Green Drone</p>
+                <h3>Agricultura de precisión con drones para monitoreo y aplicaciones aéreas</h3>
+                <p>
+                  Una pieza centrada en fumigación, fertilización, levantamientos y decisiones basadas
+                  en datos reales del terreno.
+                </p>
+                <a href="#">Descubrir más</a>
+              </article>
+
+              <article class="article-card">
+                <p class="article-card-tag">Guía técnica</p>
+                <h3>Qué solución necesita tu operación según agua, mantenimiento o trabajo en campo</h3>
+                <p>
+                  Un comparativo útil para convertir visitas en leads al orientar rápidamente a cada
+                  industria hacia la solución correcta.
+                </p>
+                <a href="#">Explorar guía</a>
+              </article>
+
+              <article class="article-card">
+                <p class="article-card-tag">Caso de uso</p>
+                <h3>Resultados visibles desde la implementación con Blue Drop y Green Drone</h3>
+                <p>
+                  Un artículo tipo caso práctico para mostrar eficiencia operativa, ahorro de recursos
+                  y mejora en procesos.
+                </p>
+                <a href="#">Leer caso</a>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <div class="faq-shell">
+        <div class="faq-copy">
+          <p class="faq-kicker reveal">FAQ</p>
+          <h2 class="reveal">Preguntas frecuentes sobre Blue Drop, Green Drone y soluciones CyC.</h2>
+          <p class="faq-intro reveal">
+            Respuestas clave para entender cómo intervenimos en agua, mantenimiento y trabajo en
+            campo.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item reveal" open>
+            <summary>¿Qué tipo de problemas puede resolver CyC del Sureste?</summary>
+            <p>
+              Ayudamos a resolver desafíos relacionados con tratamiento de agua, trampas de grasa,
+              drenajes, mantenimiento especializado, fumigación aérea, monitoreo de cultivos y
+              levantamientos técnicos en campo.
+            </p>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>¿Qué es Blue Drop y en qué casos se recomienda?</summary>
+            <p>
+              Blue Drop es una solución especializada para rehabilitación, tratamiento y
+              mantenimiento de cuerpos de agua, así como para el control de residuos en sistemas de
+              drenaje y trampas de grasa.
+            </p>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>¿Qué servicios puede realizar Green Drone?</summary>
+            <p>
+              Green Drone realiza fumigación y fertilización aérea, agricultura de precisión,
+              monitoreo de cultivos, levantamientos de terreno y aplicaciones técnicas con drones en
+              grandes superficies.
+            </p>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>¿Trabajan con distintos sectores comerciales e industriales?</summary>
+            <p>
+              Sí. Adaptamos nuestras soluciones a restaurantes, agroindustria, hotelería, cuerpos de
+              agua, operaciones en campo y otros entornos que requieren intervención técnica
+              especializada.
+            </p>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>¿Cómo puedo solicitar asesoría o una propuesta?</summary>
+            <p>
+              Puedes contactarnos para revisar tu operación, identificar el problema principal y
+              definir una solución adecuada con Blue Drop, Green Drone o una estrategia combinada.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta-section">
+      <div class="final-cta-shell reveal">
+        <p class="final-cta-kicker">Siguiente paso</p>
+        <h2>Convierte tu operación en una solución más eficiente.</h2>
+        <p class="final-cta-copy">
+          Hablemos sobre agua, mantenimiento o trabajo en campo y definamos la mejor estrategia con
+          Blue Drop, Green Drone o una solución combinada para tu empresa.
+        </p>
+        <div class="final-cta-actions">
+          <a href="#" class="final-cta-primary">Solicitar diagnóstico</a>
+          <a href="#" class="final-cta-secondary">Agendar una llamada</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="site-footer-shell">
+        <div class="site-footer-brand">
+          <img src="/cyc-logo.png" alt="CyC del Sureste" />
+          <p>
+            Soluciones especializadas en tratamiento de agua, mantenimiento técnico y trabajo en
+            campo con Blue Drop y Green Drone.
+          </p>
+        </div>
+
+        <div class="site-footer-column">
+          <p class="site-footer-title">Navegación</p>
+          <a href="#">Inicio</a>
+          <a href="#">Soluciones</a>
+          <a href="#">Artículos</a>
+          <a href="#">FAQ</a>
+        </div>
+
+        <div class="site-footer-column">
+          <p class="site-footer-title">Servicios</p>
+          <a href="#">Blue Drop</a>
+          <a href="#">Green Drone</a>
+          <a href="#">Trampas de grasa</a>
+          <a href="#">Agricultura de precisión</a>
+        </div>
+
+        <div class="site-footer-column">
+          <p class="site-footer-title">Contacto</p>
+          <a href="tel:+529991234567">+52 999 123 4567</a>
+          <a href="mailto:contacto@cycdelsureste.com">contacto@cycdelsureste.com</a>
+          <a href="#">Mérida, Yucatán</a>
+          <a href="#">Solicitar asesoría</a>
+        </div>
+      </div>
+
+      <div class="site-footer-bottom">
+        <p>© 2026 CyC del Sureste. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+  </body>
+</html>
