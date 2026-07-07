@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /page-loader.html
+
+Sitemap: https://cycdelsureste.com/sitemap.xml
