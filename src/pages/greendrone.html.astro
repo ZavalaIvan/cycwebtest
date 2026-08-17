@@ -1,0 +1,670 @@
+---
+import "../styles/page-loader.css";
+import "../styles/greendrone.css";
+import SeoHead from "../components/SeoHead.astro";
+import GoogleTagManagerNoScript from "../components/GoogleTagManagerNoScript.astro";
+import { buildBreadcrumbSchema, buildServiceSchema, buildWebPageSchema } from "../lib/seo";
+
+const title = "Green Drone | Fumigación con drones y agricultura de precisión";
+const description =
+  "Green Drone ofrece fumigación con drones, fertilización aérea, monitoreo de cultivos, mapeo y agricultura de precisión en Mérida, Yucatán y el sureste de México.";
+const path = "/greendrone.html";
+const structuredData = [
+  buildWebPageSchema({ name: title, description, path }),
+  buildServiceSchema({
+    name: "Green Drone",
+    description,
+    path,
+    serviceType: "Fumigación con drones y agricultura de precisión"
+  }),
+  buildBreadcrumbSchema([
+    { name: "Inicio", path: "/" },
+    { name: "Green Drone", path }
+  ])
+];
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <SeoHead
+      title={title}
+      description={description}
+      path={path}
+      image="/plantacion-de-semillas-con-drone.jpg"
+      structuredData={structuredData}
+    />
+    <link rel="preconnect" href="https://www.youtube-nocookie.com" />
+    <link rel="preconnect" href="https://i.ytimg.com" />
+    <link rel="preload" as="image" href="/greendrone-logo.png" fetchpriority="high" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </head>
+  <body>
+    <GoogleTagManagerNoScript />
+    <div class="page-loader" data-page-loader aria-hidden="true">
+      <div class="page-loader-panel">
+        <div class="page-loader-mark">
+          <img src="/cyc-logo.png" alt="" />
+        </div>
+        <p class="page-loader-copy">Cargando experiencia Green Drone y recursos de campo.</p>
+        <div class="page-loader-bar"><span></span></div>
+        <p class="page-loader-meta">Preparando experiencia</p>
+      </div>
+    </div>
+
+    <a
+      class="sticky-whatsapp"
+      href="https://wa.me/529811686386?text=Hola,%20quiero%20informacion%20sobre%20Green%20Drone"
+      target="_blank"
+      rel="noreferrer"
+      aria-label="Abrir WhatsApp"
+    >
+      <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+    </a>
+
+    <nav class="site-nav greendrone-nav">
+      <div class="nav-shell">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <div class="mega-menu-overlay">
+        <div class="mega-menu-shell">
+          <div class="mega-menu-header">
+            <button class="mega-menu-close" type="button" aria-label="Cerrar menú">Cerrar</button>
+          </div>
+
+          <div class="mega-menu-nav">
+            <a class="nav-link" href="/index.html">Inicio</a>
+            <a class="nav-link" href="/index.html">Resultados</a>
+            <a class="nav-link" href="/contacto.html">Ventas</a>
+            <a class="nav-link" href="/blog/">Artículos</a>
+            <a class="nav-link mega-menu-contact" href="/contacto.html">Contacto</a>
+          </div>
+
+          <div class="mega-menu" data-panel="soluciones">
+            <div class="mega-menu-showcase">
+              <div class="mega-menu-side mega-menu-side-left">
+                <a class="mega-menu-side-title" href="/bluedrop2.html">Blue Drop</a>
+                <a href="/bluedrop2.html">Para Restaurantes</a>
+                <a href="/bluedrop2.html">Para Hoteles</a>
+                <a href="/bluedrop2.html">Para Lagos</a>
+                <a href="/bluedrop2.html">Para Residuales</a>
+              </div>
+
+              <a class="mega-menu-card mega-menu-card-blue" href="/bluedrop2.html" aria-label="Ir a Blue Drop">
+                <img src="/cluedrop-logo.png" alt="Blue Drop" />
+              </a>
+
+              <a class="mega-menu-card mega-menu-card-green" href="/greendrone.html" aria-label="Ir a Green Drone">
+                <img src="/greendrone-logo.png" alt="Green Drone" />
+              </a>
+
+              <div class="mega-menu-side mega-menu-side-right">
+                <a class="mega-menu-side-title" href="/greendrone.html">Green Drone</a>
+                <a href="/greendrone.html">Dron Agrícola</a>
+                <a href="/greendrone.html">Fotogrametría</a>
+                <a href="/greendrone.html">Topografía</a>
+                <a href="/greendrone.html">Fumigación</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-video" aria-hidden="true" inert>
+          <iframe
+            id="greendrone-hero-player"
+            src="https://www.youtube-nocookie.com/embed/XnX8JkTcO3Y?autoplay=1&mute=1&controls=0&loop=1&playlist=XnX8JkTcO3Y&start=84&playsinline=1&disablekb=1&fs=0&iv_load_policy=3&rel=0&modestbranding=1&enablejsapi=1&vq=hd1080"
+            width="1920"
+            height="1080"
+            title="Video ambiental de Green Drone"
+            loading="eager"
+            tabindex="-1"
+            aria-hidden="true"
+            allow="autoplay; encrypted-media"
+            referrerpolicy="strict-origin-when-cross-origin"
+          ></iframe>
+        </div>
+        <div class="hero-overlay">
+          <div class="hero-title-content">
+            <div class="hero-brand">
+              <img src="/greendrone-logo.png" alt="Green Drone" />
+            </div>
+            <p class="hero-eyebrow">El futuro del campo está en el aire</p>
+            <h1>Soluciones aéreas inteligentes para el manejo eficiente del campo</h1>
+          </div>
+        </div>
+      </section>
+
+      <section class="section precision-hero" id="solucion">
+        <div class="hero-backdrop"></div>
+        <div class="shell precision-hero-grid">
+          <div class="precision-copy reveal">
+            <p class="eyebrow precision-eyebrow"><span aria-hidden="true"><img src="/img/iconos-gd/tecnologia-aplicada-agricultura-de-presicion.webp" alt="" /></span>Tecnología aérea aplicada a agricultura de precisión</p>
+            <h2>Reduce costos y mejora la cobertura en tus cultivos con <span>aplicación aérea de precisión</span></h2>
+            <p>
+              Ejecuta aplicaciones más rápidas, uniformes y eficientes incluso en terrenos donde la maquinaria no puede operar.
+            </p>
+            <div class="precision-note">
+              <span aria-hidden="true"><img src="/img/iconos-gd/drone-riego.webp" alt="" /></span>
+              <p><strong>No solo operamos drones.</strong> Analizamos tu terreno, diseñamos la estrategia y ejecutamos la aplicación para que realmente funcione en campo.</p>
+            </div>
+
+       <div class="action-row">
+  <a class="btn primary" href="#formulario">
+    <span aria-hidden="true">
+        <img src="/img/iconos-gd/calendario-icono.svg" alt="">
+    </span>
+    Solicitar diagnóstico gratuito
+  </a>
+
+  <a class="btn secondary" href="https://wa.me/529811686386?text=Hola,%20quiero%20informacion%20sobre%20Green%20Drone" target="_blank" rel="noreferrer">
+    <span aria-hidden="true">
+      <i class="fa-brands fa-whatsapp"></i>
+    </span>
+    Hablar por WhatsApp
+  </a>
+</div></div>
+
+          <div class="precision-visual reveal">
+            <div class="precision-image-card">
+              <video
+                class="precision-video"
+                muted
+                playsinline
+                loop
+                preload="none"
+                data-src="/cyc-drone-aplicaciones.mp4"
+                poster="/greendrone-logo.png"
+                aria-label="Cultivo atendido con aplicación aérea agrícola"
+              >
+                Tu navegador no soporta video HTML5.
+              </video>
+              <div class="precision-saving-badge">
+                <span aria-hidden="true"><img src="/img/iconos-gd/menos-desperdicio-de-insumos.webp" alt="" /></span>
+                <strong>Hasta 40% menos desperdicio de insumos</strong>
+              </div>
+            </div>
+            <div class="precision-problem-card">
+              <p class="eyebrow"><span aria-hidden="true"><img src="/img/iconos-gd/siembra-agricola.webp" alt="" /></span>Problemas comunes en fumigación agrícola</p>
+              <ul>
+                <li>Cobertura irregular en cultivos</li>
+                <li>Alto desperdicio de agroquímicos</li>
+                <li>Dificultad para monitorear grandes superficies</li>
+                <li>Costos elevados de operación</li>
+                <li>Terrenos donde la maquinaria no puede acceder</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="precision-trust-row reveal">
+            <span><i aria-hidden="true">♙</i>Atención personalizada por cultivo</span>
+            <span><i aria-hidden="true">◇</i>Diagnóstico según terreno</span>
+            <span><i aria-hidden="true">◎</i>Aplicaciones para distintos objetivos</span>
+            <span><i aria-hidden="true">♧</i>Reduce desperdicio de químicos</span>
+            <span><i aria-hidden="true">▥</i>Optimización de insumos</span>
+          </div>
+
+          <div class="precision-metrics">
+
+  <article>
+    <span aria-hidden="true">
+      <img src="/img/iconos-gd/Ahorra-tiempo-y-dinero.webp" alt="">
+    </span>
+    <div>
+      <p>Ahorra tiempo</p>
+      <strong>50%</strong>
+      <small>menos tiempo de aplicación</small>
+    </div>
+  </article>
+
+  <article>
+    <span aria-hidden="true">
+      <img src="/img/iconos-gd/mayor-presicion-cobertura-uniforme.webp" alt="">
+    </span>
+    <div>
+      <p>Mayor precisión</p>
+      <strong>98%</strong>
+      <small>de cobertura uniforme</small>
+    </div>
+  </article>
+
+  <article>
+    <span aria-hidden="true">
+      <img src="/img/iconos-gd/menos-insumos.webp" alt="">
+    </span>
+    <div>
+      <p>Menos insumos</p>
+      <strong>30-40%</strong>
+      <small>menos desperdicio</small>
+    </div>
+  </article>
+
+  <article>
+    <span aria-hidden="true">
+      <img src="/img/iconos-gd/mayor-rendimiento-icono.webp" alt="">
+    </span>
+    <div>
+      <p>Mayor rendimiento</p>
+      <strong>+15%</strong>
+      <small>en productividad</small>
+    </div>
+  </article>
+
+</div>
+      </section>
+
+    <section class="section problem-section">
+  <div class="shell problem-shell">
+    <div class="problem-copy reveal">
+      <p class="eyebrow problem-eyebrow">
+        <span aria-hidden="true">
+          <img src="/img/iconos-gd/planta-verde-icono.webp" alt="">
+        </span>
+        Identificación del problema
+      </p>
+
+      <h2>¿Tu operación en campo tiene alguno de estos retos?</h2>
+
+      <p>
+        Si el trabajo manual o terrestre ya no te da la velocidad, precisión o cobertura que necesitas,
+        probablemente no necesitas más esfuerzo. Necesitas una mejor forma de intervenir.
+      </p>
+
+    </div>
+
+    <div class="problem-visual reveal">
+      <img src="/plantacion-de-semillas-con-drone.jpg" alt="Drone aplicando sobre cultivos">
+
+      <div class="problem-visual-band">
+        <article>
+          <span aria-hidden="true">
+            <img src="/img/iconos-gd/drone-riego-agricola.webp" alt="">
+          </span>
+          <div>
+            <strong>Más rápido</strong>
+            <p>Cubre más hectáreas en menos tiempo</p>
+          </div>
+        </article>
+
+        <article>
+          <span aria-hidden="true">
+            <img src="/img/iconos-gd/mayor-presicion-cobertura-uniforme.webp" alt="">
+          </span>
+          <div>
+            <strong>Más preciso</strong>
+            <p>Aplicación uniforme y controlada</p>
+          </div>
+        </article>
+
+        <article>
+          <span aria-hidden="true">
+            <img src="/img/iconos-gd/pantalla-metricas.webp" alt="">
+          </span>
+          <div>
+            <strong>Más eficiente</strong>
+            <p>Menos insumos, mejores resultados</p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="problem-alert">
+      <span aria-hidden="true">
+        <img src="/img/iconos-gd/Ahorra-tiempo-y-dinero.webp" alt="">
+      </span>
+      <p>
+        Estos desafíos afectan tus resultados y aumentan tus costos. Con tecnología aérea,
+        puedes resolverlos de forma eficiente.
+      </p>
+    </div>
+
+   
+
+    <div class="problem-card-grid">
+      <article class="problem-card reveal">
+        <span class="problem-card-icon" aria-hidden="true"><img src="/img/iconos-gd/mejora-tu-rendimiento.webp" alt="" /></span>
+        <div>
+          <h3>Dificultad para cubrir grandes superficies en poco tiempo</h3>
+          <p>Los métodos tradicionales toman demasiado tiempo y requieren más personal y recursos.</p>
+        </div>
+      </article>
+
+      <article class="problem-card reveal">
+        <span class="problem-card-icon" aria-hidden="true"><img src="/img/iconos-gd/menos-insumos.webp" alt="" /></span>
+        <div>
+          <h3>Aplicaciones de agroquímicos o fertilizantes con poca uniformidad</h3>
+          <p>La aplicación manual o terrestre genera coberturas irregulares y reduce la efectividad del tratamiento.</p>
+        </div>
+      </article>
+
+      <article class="problem-card reveal">
+        <span class="problem-card-icon" aria-hidden="true"><img src="/img/iconos-gd/costos-altos-monedas.webp" alt="" /></span>
+        <div>
+          <h3>Costos altos de operación en tareas repetitivas de campo</h3>
+          <p>Más horas hombre, más combustible y más desgaste de maquinaria significan mayores costos.</p>
+        </div>
+      </article>
+
+      <article class="problem-card reveal">
+        <span class="problem-card-icon" aria-hidden="true"><img src="/img/iconos-gd/digitaliza-tu-operacion.webp" alt="" /></span>
+        <div>
+          <h3>Falta de visibilidad para monitorear avances, daños o condiciones del terreno</h3>
+          <p>Sin información aérea, las decisiones se toman a ciegas y los problemas se detectan tarde.</p>
+        </div>
+      </article>
+
+      <article class="problem-card reveal">
+        <span class="problem-card-icon" aria-hidden="true"><img src="/img/iconos-gd/acceso-complicado-a-zonas-extensas.webp" alt="" /></span>
+        <div>
+          <h3>Acceso complicado a zonas extensas, fangosas, inclinadas o delicadas</h3>
+          <p>La maquinaria terrestre no puede ingresar a todas las áreas donde tu cultivo lo necesita.</p>
+        </div>
+      </article>
+
+      <article class="problem-card reveal">
+        <span class="problem-card-icon" aria-hidden="true"><img src="/img/iconos-gd/topografia-y-fotogrametria.webp" alt="" /></span>
+        <div>
+          <h3>Necesidad de tomar decisiones más rápidas con información visual del terreno</h3>
+          <p>Contar con datos actualizados te permite actuar rápido y evitar pérdidas.</p>
+        </div>
+      </article>
+
+      <article class="problem-card reveal">
+        <span class="problem-card-icon" aria-hidden="true"><img src="/img/iconos-gd/pantalla-metricas.webp" alt="" /></span>
+        <div>
+          <h3>Procesos lentos de levantamiento, inspección o reconocimiento</h3>
+          <p>Relevar información en campo consume tiempo que podrías invertir en hacer crecer tu operación.</p>
+        </div>
+      </article>
+
+      <article class="problem-card reveal">
+        <span class="problem-card-icon" aria-hidden="true"><img src="/img/iconos-gd/Ahorra-tiempo-y-dinero.webp" alt="" /></span>
+        <div>
+          <h3>Necesidad de mejorar precisión sin incrementar demasiado la carga operativa</h3>
+          <p>Quieres mejores resultados sin complicar más tu operación ni aumentar tus costos.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+      <section class="section service-showcase" id="solucion">
+        <div class="shell service-showcase-grid">
+          <div class="service-copy reveal">
+            <p class="eyebrow service-eyebrow"><img class="service-eyebrow-logo" src="/Green-Drone-Logo_3d.webp" alt="Green Drone" /></p>
+            <h2>Aplicación aérea, monitoreo y ejecución técnica en campo</h2>
+            <p>
+              Integramos tecnología de drones con experiencia técnica para ejecutar aplicaciones agrícolas más eficientes, precisas y controladas.
+              No se trata solo de volar: se trata de aplicar correctamente cada tratamiento en el momento adecuado.
+            </p>
+            <div class="service-list">
+              <article class="service-item">
+                <span class="service-icon" aria-hidden="true"><img src="/img/iconos-gd/menos-insumos.webp" alt="" /></span>
+                <div>
+                <strong>Aplicación de agroquímicos</strong>
+                <p>Cobertura uniforme que reduce errores humanos y mejora la efectividad del tratamiento.</p>
+                </div>
+                <i aria-hidden="true">›</i>
+              </article>
+              <article class="service-item">
+                <span class="service-icon" aria-hidden="true"><img src="/img/iconos-gd/fertilizacion-area.webp" alt="" /></span>
+                <div>
+                <strong>Fertilización aérea</strong>
+                <p>Distribución precisa que optimiza el uso de insumos y mejora el rendimiento del cultivo.</p>
+                </div>
+                <i aria-hidden="true">›</i>
+              </article>
+              <article class="service-item">
+                <span class="service-icon" aria-hidden="true"><img src="/img/iconos-gd/monitoreo-en-tiempo-real.webp" alt="" /></span>
+                <div>
+                <strong>Monitoreo de cultivos</strong>
+                <p>Detectamos problemas antes de que se conviertan en pérdidas: plagas, estrés hídrico o zonas afectadas.</p>
+                </div>
+                <i aria-hidden="true">›</i>
+              </article>
+              <article class="service-item">
+                <span class="service-icon" aria-hidden="true"><img src="/img/iconos-gd/digitaliza-tu-operacion.webp" alt="" /></span>
+                <div>
+                <strong>Ejecución técnica</strong>
+                <p>Planeación, operación y seguimiento para asegurar resultados reales en campo.</p>
+                </div>
+                <i aria-hidden="true">›</i>
+              </article>
+            </div>
+            <div class="service-bottom-note">
+              <span class="service-icon service-icon-note" aria-hidden="true"><img src="/img/iconos-gd/Logo-icono-cyc.webp" alt="" /></span>
+              <p>Green Drone integra <strong>aplicación aérea agrícola</strong>, <strong>fumigación con drones</strong> y <strong>agricultura de precisión</strong> para decidir mejor y ejecutar más rápido.</p>
+            </div>
+          </div>
+
+          <div class="service-visual reveal">
+            <div class="service-image-card">
+              <video
+                class="service-image-video"
+                data-src="/tratamiento-de-lagos-con-drone.mp4"
+                muted
+                loop
+                playsinline
+                preload="none"
+                aria-label="Tratamiento de lagos con drone"
+              >
+                Tu navegador no soporta video HTML5.
+              </video>
+              
+            </div>
+            <a class="service-video-card" href="https://www.youtube.com/watch?v=Ax83L-Mkoh8" target="_blank" rel="noreferrer">
+              <img src="/medir-terreno-con-drone.jpg" alt="Tecnología Green Drone en campo" />
+              <div>
+                <h3><span>Menos</span> tiempo, más eficiente</h3>
+                <p>Tecnología que transforma tu operación en campo.</p>
+              </div>
+              <span class="service-play" aria-hidden="true">▶</span>
+              <small>Ver en YouTube</small>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      
+
+      
+
+      <section class="section process-showcase">
+        <div class="shell">
+          <div class="process-heading reveal">
+            <p class="eyebrow process-eyebrow"><img class="process-eyebrow-logo" src="/img/iconos-gd/tecnologia-aplicada-agricultura-de-presicion.webp" alt="" />Como funciona</p>
+            <h2>Así trabajamos contigo en campo</h2>
+            <p>Un proceso claro, profesional y eficiente para que obtengas mejores resultados desde la primera aplicación.</p>
+          </div>
+          <div class="process-list">
+            <article class="process-step reveal">
+              <div class="process-number"><span>1</span></div>
+              <div class="process-icon" aria-hidden="true"><img src="/img/iconos-gd/pantalla-metricas.webp" alt="" /></div>
+              <div class="process-text">
+                <h3>Analizamos tu necesidad</h3>
+                <p>Evaluamos el tipo de cultivo, problema actual y condiciones del terreno para entender tu objetivo.</p>
+              </div>
+              <img src="/medir-terreno-con-drone.jpg" alt="Evaluación de cultivo con drone agricola" />
+            </article>
+            <article class="process-step reveal">
+              <div class="process-number"><span>2</span></div>
+              <div class="process-icon" aria-hidden="true"><img src="/img/iconos-gd/digitaliza-tu-operacion.webp" alt="" /></div>
+              <div class="process-text">
+                <h3>Diseñamos la estrategia</h3>
+                <p>Definimos el tipo de aplicación, dosis, zonas específicas y frecuencia ideal para tu cultivo.</p>
+              </div>
+              <img src="/plantacion-de-semillas-con-drone.jpg" alt="Planeación de aplicación aérea agrícola por zonas" />
+            </article>
+            <article class="process-step reveal">
+              <div class="process-number"><span>3</span></div>
+              <div class="process-icon" aria-hidden="true"><img src="/img/iconos-gd/topografia-y-fotogrametria.webp" alt="" /></div>
+              <div class="process-text">
+                <h3>Ejecutamos en campo</h3>
+                <p>Realizamos la operación con drones de alta precisión y control técnico en cada detalle.</p>
+              </div>
+              <img src="/drone-riego-uniforme.webp" alt="Fumigación con drones en campo agrícola" />
+            </article>
+            <article class="process-step reveal">
+              <div class="process-number"><span>4</span></div>
+              <div class="process-icon" aria-hidden="true"><img src="/img/iconos-gd/monitoreo-en-tiempo-real.webp" alt="" /></div>
+              <div class="process-text">
+                <h3>Seguimiento y optimización</h3>
+                <p>Monitoreamos resultados, analizamos datos y ajustamos para mejorar cada intervención y maximizar tu inversión.</p>
+              </div>
+              <img src="/green-drone-seguimiento-y-continuidad.webp" alt="Monitoreo de resultados de agricultura de precisión" />
+            </article>
+          </div>
+          <div class="process-cta reveal">
+            <span class="process-cta-icon" aria-hidden="true"><img src="/img/iconos-gd/Logo-icono-cyc.webp" alt="" /></span>
+            <p>Con tecnología, experiencia y compromiso, hacemos que cada hectárea rinda más. <strong>Más precisión. Más eficiencia. Mejores resultados.</strong></p>
+            <div class="action-row">
+              <a class="btn primary" href="contacto.html">Solicitar diagnóstico</a>
+              <a class="btn secondary" href="https://wa.me/529811686386?text=Hola,%20quiero%20informacion%20sobre%20Green%20Drone" target="_blank" rel="noreferrer">Hablar por WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+
+      <section class="section scenarios-showcase">
+        <div class="shell">
+          <div class="scenarios-heading reveal">
+            <p class="eyebrow scenarios-eyebrow"><img class="scenarios-eyebrow-logo" src="/img/iconos-gd/tecnologia-aplicada-agricultura-de-presicion.webp" alt="" />Resultados reales en campo</p>
+            <h2>Escenarios donde Green Drone genera mayor impacto</h2>
+            <p>Nuestra tecnología se adapta a diferentes condiciones agrícolas y tipos de terreno. Más allá de la tecnología, lo importante son los resultados: <strong>así es como trabajamos en condiciones reales.</strong></p>
+          </div>
+          <div class="scenarios-card-grid">
+            <article class="scenario-card reveal">
+              <div class="scenario-media scenario-map">
+                <img src="/medir-terreno-con-drone.jpg" alt="Planeación inteligente con drones agrícolas" />
+                
+              </div>
+              <div class="scenario-body">
+                <div>
+                  <h3>Planeación inteligente</h3>
+                  <p>Analizamos cada terreno y generamos mapas de prescripción para aplicar solo lo necesario, donde más se necesita.</p>
+                </div>
+              </div>
+              <p class="scenario-note">Aplicaciones más eficientes, menos costos.</p>
+            </article>
+            <article class="scenario-card reveal">
+              <div class="scenario-media">
+                <img src="/plantacion-de-semillas-con-drone.jpg" alt="Terrenos extensos y de difícil acceso con drone agrícola" />
+              </div>
+              <div class="scenario-body">
+                <div>
+                  <h3>Terrenos extensos y de difícil acceso</h3>
+                  <p>Llegamos a zonas donde los métodos tradicionales no son rentables o incluso no pueden operar.</p>
+                </div>
+              </div>
+              <p class="scenario-note">Cobertura total, sin importar el terreno.</p>
+            </article>
+            <article class="scenario-card reveal">
+              <div class="scenario-media">
+                <img src="/lago-tratado-con-blue-drop.jpg" alt="Aplicación precisa en zonas sensibles y medio ambiente" />
+              </div>
+              <div class="scenario-body">
+                <div>
+                  <h3>Zonas sensibles y medio ambiente</h3>
+                  <p>Aplicaciones precisas que reducen la contaminación de suelo y agua, cuidando el entorno y cumpliendo normativas.</p>
+                </div>
+              </div>
+              <p class="scenario-note">Tecnología que protege y produce.</p>
+            </article>
+          </div>
+          <div class="scenarios-stats reveal">
+            <article class="scenarios-stat-lead scenarios-stat-hero">
+              <img class="scenarios-stat-hero-image" src="/img/iconos-gd/premio-a-green-drone.webp" alt="Premio a Green Drone" />
+              <strong>Miles de hectáreas trabajadas en diferentes condiciones reales</strong>
+            </article>
+            <article><strong>+50,000</strong><small>hectáreas atendidas</small></article>
+            <article><strong>+30</strong><small>tipos de cultivo</small></article>
+            <article><strong><img class="scenarios-stat-map" src="img/iconos-gd/sureste-mexicano-green-drone-02.svg" alt="Cobertura en el sureste de México" /></strong><small>Cobertura en el sureste de México</small></article>
+            <article><strong>100%</strong><small>comprometidos con resultados</small></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="shell">
+          <div class="section-copy reveal">
+            <p class="eyebrow">Preguntas frecuentes</p>
+            <h2>Preguntas frecuentes sobre fumigación con drones</h2>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item reveal" open><summary>¿GreenDrone es solo fumigación?</summary><p>No. GreenDrone es un servicio técnico especializado en agricultura de precisión, que integra evaluación, planeación estratégica y ejecución en campo.</p><p>Incluye aplicaciones de precisión con drones, análisis multiespectral para diagnóstico de cultivos y optimización en el uso de insumos agrícolas.</p><p>No se limita a fumigar, sino que mejora la toma de decisiones y la eficiencia operativa en campo.</p><p><a href="#" class="faq-cta">Solicita una evaluación técnica y define la mejor estrategia para tu operación.</a></p></details>
+            <details class="faq-item reveal"><summary>¿En qué tipo de terrenos puede operar?</summary><p>GreenDrone puede operar en una amplia variedad de condiciones, incluyendo terrenos agrícolas convencionales, superficies irregulares o accidentadas, zonas de difícil acceso y cultivos de alta densidad.</p><p>La tecnología permite mantener alta precisión en la aplicación, incluso en escenarios donde los métodos tradicionales presentan limitaciones operativas.</p></details>
+            <details class="faq-item reveal"><summary>¿Qué ventajas ofrece frente a métodos convencionales?</summary><p>GreenDrone ofrece ventajas operativas claras frente a métodos tradicionales: mayor precisión en la dosificación de insumos, reducción significativa de desperdicio, menor exposición del personal a químicos y cobertura uniforme y controlada.</p><p>Esto se traduce en optimización de recursos, reducción de costos y mayor eficiencia en el manejo del cultivo.</p></details>
+            <details class="faq-item reveal"><summary>¿Cómo determinan si el servicio es adecuado para mi caso?</summary><p>Se realiza una evaluación técnica previa, considerando el tipo de cultivo, las condiciones del terreno y el objetivo de aplicación, ya sea nutrición, control o monitoreo.</p><p>Con base en este análisis, se define la viabilidad del servicio y la estrategia de intervención más eficiente, asegurando resultados medibles.</p></details>
+            <details class="faq-item reveal"><summary>¿Pueden atender requerimientos urgentes?</summary><p>Sí. Contamos con capacidad operativa para atender servicios en tiempos reducidos.</p><p>Sin embargo, cada intervención mantiene un proceso mínimo de planeación técnica, garantizando que la ejecución sea eficiente, segura y con resultados consistentes, incluso en escenarios urgentes.</p></details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact" id="formulario">
+        <div class="shell split">
+          <div class="section-copy reveal">
+            <p class="eyebrow">Contacto</p>
+            <h2>Mejora la eficiencia de tu operación agrícola</h2>
+            <p>
+              Si buscas reducir costos, mejorar la cobertura de tus aplicaciones y optimizar el rendimiento de tu cultivo, podemos ayudarte.
+            </p>
+            <p class="strong">Fumigación con drones, fertilización con drones y agricultura de precisión para operaciones que necesitan resultados reales.</p>
+            <div class="action-row">
+              <a class="btn primary" href="https://wa.me/529811686386?text=Hola,%20quiero%20un%20diagnostico%20de%20Green%20Drone" target="_blank" rel="noreferrer">Solicitar diagnóstico</a>
+              <a class="btn secondary" href="tel:+529811686386">Cotizar servicio</a>
+            </div>
+          </div>
+
+          <form class="form-card reveal">
+            <h3>Solicitar diagnostico</h3>
+            <p>Comparte tu caso y te orientamos en la mejor intervencion para tu operacion.</p>
+            <label>Nombre<input type="text" name="nombre" placeholder="Tu nombre" /></label>
+            <label>Empresa<input type="text" name="empresa" placeholder="Nombre de tu empresa" /></label>
+            <label>Ciudad<input type="text" name="ciudad" placeholder="Ciudad o zona" /></label>
+            <label>Necesidad<textarea name="problema" rows="4" placeholder="Describe que necesitas en campo"></textarea></label>
+            <label>Telefono<input type="tel" name="telefono" placeholder="Tu telefono" /></label>
+            <button class="btn primary" type="submit">Solicitar diagnostico</button>
+            <small>Atencion personalizada y evaluacion segun el objetivo del proyecto.</small>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-grid">
+        <div>
+          <img class="footer-logo" src="/greendrone-logo.png" alt="Green Drone" />
+          <p>Servicio de fumigación con drones en Mérida, Yucatán y el sureste de México. Soluciones de agricultura de precisión para cultivos y terrenos de diferentes tipos.</p>
+        </div>
+        <div>
+          <p class="footer-title">Navegacion</p>
+          <a href="#inicio">Inicio</a>
+          <a href="#solucion">Solucion</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div>
+          <p class="footer-title">Contacto</p>
+          <a href="tel:+529811686386">+52 981 168 6386</a>
+          <a href="https://wa.me/529811686386?text=Hola,%20quiero%20informacion%20de%20Green%20Drone" target="_blank" rel="noreferrer">WhatsApp</a>
+          <a href="mailto:greendrone@cycdelsureste.com">greendrone@cycdelsureste.com</a>
+          <a href="#formulario">Solicitar diagnostico</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../scripts/page-loader.js"></script>
+    <script src="../scripts/greendrone.js"></script>
+  </body>
+</html>

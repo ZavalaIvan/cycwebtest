@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=$HOME/public_html/
+    - /bin/mkdir -p "$DEPLOYPATH"
+    - if command -v rsync >/dev/null 2>&1; then rsync -a --delete dist/ "$DEPLOYPATH"; else /bin/cp -R dist/. "$DEPLOYPATH"; fi

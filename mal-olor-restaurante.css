@@ -1,0 +1,413 @@
+:root {
+  --blue: #0077ff;
+  --blue-dark: #062a4f;
+  --green: #00c875;
+  --dark: #071827;
+  --text: #172033;
+  --muted: #667085;
+  --soft: #f5f9fc;
+  --border: #e7eef5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: #fff;
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+.blog-page {
+  color: var(--text);
+  background: #fff;
+}
+
+.blog-hero {
+  min-height: 86vh;
+  padding: 90px 7vw;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: center;
+  background:
+    radial-gradient(circle at top right, rgba(0, 119, 255, 0.35), transparent 34%),
+    linear-gradient(135deg, #061625 0%, #082d4d 48%, #0077ff 100%);
+  color: white;
+  overflow: hidden;
+}
+
+.eyebrow {
+  display: inline-flex;
+  width: fit-content;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.18);
+  margin-bottom: 20px;
+}
+
+.eyebrow.blue {
+  color: var(--blue);
+  background: #eaf4ff;
+  border-color: #d6ebff;
+}
+
+.eyebrow.light {
+  color: white;
+}
+
+.blog-hero h1 {
+  max-width: 780px;
+  margin: 0 0 24px;
+  font-size: clamp(2.6rem, 6vw, 5.4rem);
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+}
+
+.blog-hero p {
+  max-width: 680px;
+  color: rgba(255,255,255,0.82);
+  font-size: 1.16rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 34px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 15px 22px;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.btn-primary {
+  background: var(--green);
+  color: #041f13;
+}
+
+.btn-secondary {
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.blog-hero__card {
+  padding: 32px;
+  border-radius: 34px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.18);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 30px 90px rgba(0,0,0,0.25);
+}
+
+.blog-hero__card h3 {
+  margin: 0 0 22px;
+  font-size: 1.55rem;
+}
+
+.symptom {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.symptom:last-child {
+  border-bottom: 0;
+}
+
+.symptom svg {
+  color: #70ffc1;
+  flex: 0 0 auto;
+}
+
+.icon {
+  display: inline-grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: 1.35em;
+  height: 1.35em;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.symptom .icon,
+.benefits-list .icon {
+  color: #70ffc1;
+}
+
+.container {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.blog-section,
+.split-section,
+.solution-section {
+  padding: 92px 0;
+}
+
+.blog-section {
+  background: white;
+}
+
+.section-heading {
+  max-width: 760px;
+  margin-bottom: 42px;
+}
+
+.section-heading h2,
+.split h2,
+.solution-box h2,
+.final-cta h2 {
+  margin: 0 0 18px;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.section-heading p,
+.split p,
+.solution-box p,
+.final-cta p {
+  font-size: 1.08rem;
+  color: var(--muted);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.info-card {
+  padding: 30px;
+  border-radius: 28px;
+  border: 1px solid var(--border);
+  background: white;
+  box-shadow: 0 18px 50px rgba(16, 24, 40, 0.06);
+}
+
+.icon-box {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 22px;
+  background: linear-gradient(135deg, #e8f4ff, #ddfff2);
+  color: var(--blue);
+  font-size: 1.45rem;
+  font-weight: 900;
+}
+
+.icon-box svg {
+  width: 28px;
+  height: 28px;
+}
+
+.info-card h3 {
+  margin: 0 0 12px;
+  font-size: 1.35rem;
+}
+
+.info-card p {
+  color: var(--muted);
+}
+
+.split-section {
+  background: var(--soft);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 54px;
+  align-items: center;
+}
+
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 28px 0 0;
+  display: grid;
+  gap: 14px;
+}
+
+.check-list li {
+  position: relative;
+  padding: 16px 18px 16px 46px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 10px 34px rgba(16, 24, 40, 0.05);
+}
+
+.check-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 18px;
+  top: 16px;
+  color: var(--green);
+  font-weight: 900;
+}
+
+.quote-card {
+  min-height: 360px;
+  border-radius: 34px;
+  padding: 42px;
+  display: flex;
+  align-items: flex-end;
+  background:
+    linear-gradient(180deg, rgba(7,24,39,0.05), rgba(7,24,39,0.86)),
+    url("/img/mal-olo-en-trampas-de-grasa.webp") center/cover no-repeat;
+  box-shadow: 0 28px 80px rgba(16, 24, 40, 0.16);
+}
+
+.quote-card p {
+  color: white;
+  font-size: 1.45rem;
+  line-height: 1.3;
+  font-weight: 800;
+}
+
+.solution-section {
+  background: white;
+}
+
+.solution-box {
+  padding: 56px;
+  border-radius: 38px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 44px;
+  align-items: center;
+  background:
+    radial-gradient(circle at top right, rgba(0, 200, 117, 0.28), transparent 32%),
+    linear-gradient(135deg, #061625, #005bc5);
+  color: white;
+  box-shadow: 0 34px 90px rgba(0, 91, 197, 0.28);
+}
+
+.solution-box p {
+  color: rgba(255,255,255,0.78);
+}
+
+.benefits-list {
+  display: grid;
+  gap: 14px;
+}
+
+.benefits-list div {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.13);
+}
+
+.benefits-list svg {
+  color: #70ffc1;
+  flex: 0 0 auto;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.steps div {
+  padding: 30px;
+  border-radius: 28px;
+  background: var(--soft);
+  border: 1px solid var(--border);
+}
+
+.steps span {
+  display: block;
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: var(--blue);
+  margin-bottom: 20px;
+}
+
+.steps h3 {
+  margin: 0 0 10px;
+}
+
+.steps p {
+  color: var(--muted);
+}
+
+.final-cta {
+  padding: 92px 20px;
+  text-align: center;
+  background:
+    linear-gradient(135deg, rgba(6, 22, 37, 0.94), rgba(0, 119, 255, 0.82)),
+    url("/img/servicios-tratamiento-de-trampas-de-grasa.png") center/cover no-repeat;
+  color: white;
+}
+
+.final-cta p {
+  max-width: 720px;
+  margin: 0 auto 30px;
+  color: rgba(255,255,255,0.8);
+}
+
+@media (max-width: 920px) {
+  .blog-hero,
+  .cards-grid,
+  .split,
+  .solution-box,
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-hero {
+    padding: 72px 22px;
+  }
+
+  .solution-box {
+    padding: 34px;
+  }
+}

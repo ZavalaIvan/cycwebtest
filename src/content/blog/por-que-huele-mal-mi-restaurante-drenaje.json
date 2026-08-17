@@ -1,0 +1,14 @@
+{
+  "title": "Por qué huele mal mi restaurante | Blue Drop",
+  "description": "Guía para identificar por qué un restaurante huele a drenaje, grasa o humedad aunque se limpie todos los días.",
+  "excerpt": "Detecta si el mal olor viene del drenaje, la trampa de grasa o la acumulación orgánica, y conoce una ruta real para resolverlo.",
+  "category": "Restaurantes",
+  "eyebrow": "Blog Blue Drop",
+  "legacyFile": "por-que-huele-mal-mi-restaurante-drenaje.html",
+  "stylesheet": "mal-olor-restaurante.css",
+  "sourceRoot": "main",
+  "pageClass": "blog-page",
+  "order": 5,
+  "readingTime": "5 min",
+  "canonicalSlug": "por-que-huele-mal-mi-restaurante-drenaje"
+}

@@ -1,27 +1,50 @@
-﻿<!DOCTYPE html>
+﻿---
+import "../styles/page-loader.css";
+import "../styles/styles.css";
+import SeoHead from "../components/SeoHead.astro";
+import GoogleTagManagerNoScript from "../components/GoogleTagManagerNoScript.astro";
+import { buildServiceSchema, buildWebPageSchema } from "../lib/seo";
+
+const title = "CyC del Sureste | Tratamiento de agua y agricultura de precisión";
+const description =
+  "CyC del Sureste integra Blue Drop y Green Drone para tratamiento de agua, control de olores, mantenimiento técnico y agricultura de precisión en el sureste de México.";
+const structuredData = [
+  buildWebPageSchema({ name: title, description, path: "/" }),
+  buildServiceSchema({
+    name: "Blue Drop",
+    description:
+      "Tratamiento, rehabilitación y mantenimiento de sistemas de agua, trampas de grasa, drenajes y cuerpos de agua.",
+    path: "/bluedrop2.html",
+    serviceType: "Tratamiento de agua y mantenimiento sanitario"
+  }),
+  buildServiceSchema({
+    name: "Green Drone",
+    description:
+      "Fumigación con drones, fertilización aérea, monitoreo de cultivos y agricultura de precisión.",
+    path: "/greendrone.html",
+    serviceType: "Agricultura de precisión con drones"
+  })
+];
+---
+
+<!DOCTYPE html>
 <html lang="es">
   <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-W32JZQMP');</script>
-    <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CyC del Sureste | Consultores y Comercializadores</title>
+    <SeoHead
+      title={title}
+      description={description}
+      path="/"
+      image="/lago-tratado-con-blue-drop.jpg"
+      structuredData={structuredData}
+    />
     <link rel="preconnect" href="https://www.youtube-nocookie.com" />
     <link rel="preconnect" href="https://i.ytimg.com" />
     <link rel="preload" as="image" href="/cyc-logo.png" fetchpriority="high" />
-    <link rel="stylesheet" href="/page-loader.css" />
-    <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W32JZQMP"
-    height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <GoogleTagManagerNoScript />
     <div class="page-loader" data-page-loader aria-hidden="true">
       <div class="page-loader-panel">
         <div class="page-loader-mark">
@@ -51,7 +74,7 @@
             <a class="nav-link" href="/index.html">Inicio</a>
             <a class="nav-link" href="/index.html">Resultados</a>
             <a class="nav-link" href="/contacto.html">Ventas</a>
-            <a class="nav-link" href="/index.html">Artículos</a>
+            <a class="nav-link" href="/blog/">Artículos</a>
             <a class="nav-link mega-menu-contact" href="/contacto.html">Contacto</a>
           </div>
 
@@ -90,7 +113,7 @@
       <div class="hero-video" aria-hidden="true" inert>
         <iframe
           id="hero-background-player"
-          src="https://www.youtube-nocookie.com/embed/or_c4U8OB6o?autoplay=1&amp;mute=1&amp;controls=0&amp;loop=1&amp;playlist=or_c4U8OB6o&amp;start=0&amp;end=5&amp;playsinline=1&amp;disablekb=1&amp;fs=0&amp;iv_load_policy=3&amp;rel=0&amp;modestbranding=1&amp;enablejsapi=1&amp;vq=hd1080"
+          src="https://www.youtube-nocookie.com/embed/or_c4U8OB6o?autoplay=1&mute=1&controls=0&loop=1&playlist=or_c4U8OB6o&start=0&end=5&playsinline=1&disablekb=1&fs=0&iv_load_policy=3&rel=0&modestbranding=1&enablejsapi=1&vq=hd1080"
           title="Video ambiental de CyC del Sureste"
           loading="eager"
           tabindex="-1"
@@ -333,31 +356,31 @@
                 <p class="article-card-tag">Lagos y estanques</p>
                 <h3>Qué ocasiona el mal olor en lagos y estanques y cómo eliminarlo</h3>
                 <p>Explica las causas principales del olor en cuerpos de agua: baja oxigenación, materia orgánica, algas y sedimentos.</p>
-                <a href="que-ocasiona-el-mal-olor-en-lagos-y-estanques.html" target="_blank" rel="noreferrer noopener">Leer artículo</a>
+                <a href="/blog/que-ocasiona-el-mal-olor-en-lagos-y-estanques/">Leer artículo</a>
               </article>
               <article class="article-card">
                 <p class="article-card-tag">Recuperación de lagos</p>
                 <h3>Cómo recuperar un lago o estanque verde o con mal olor</h3>
                 <p>Una guía paso a paso para diagnosticar, oxigenar, reducir lodos y recuperar el equilibrio del agua.</p>
-                <a href="como-recuperar-un-lago-con-mal-olor.html" target="_blank" rel="noreferrer noopener">Leer artículo</a>
+                <a href="/blog/como-recuperar-un-lago-con-mal-olor/">Leer artículo</a>
               </article>
               <article class="article-card">
                 <p class="article-card-tag">Restaurantes</p>
                 <h3>Causas comunes de malos olores en restaurantes y como solucionarlos</h3>
                 <p>Identifica de dónde vienen los olores en cocina, trampas de grasa, drenajes y tuberías para resolverlos desde la causa.</p>
-                <a href="causas-comunes-de-malos-olores-en-restaurantes-y-como-solucionarlos.html" target="_blank" rel="noreferrer noopener">Leer artículo</a>
+                <a href="/blog/causas-comunes-de-malos-olores-en-restaurantes-y-como-solucionarlos/">Leer artículo</a>
               </article>
               <article class="article-card">
                 <p class="article-card-tag">Trampas de grasa</p>
                 <h3>Evita malos olores, grasa acumulada y bloqueos en tu trampa de grasa</h3>
                 <p>Conoce cómo mantener trampas de grasa en mejores condiciones y reducir mantenimiento correctivo en cocinas comerciales.</p>
-                <a href="blog-trampas-de-grasa.html" target="_blank" rel="noreferrer noopener">Leer artículo</a>
+                <a href="/blog/blog-trampas-de-grasa/">Leer artículo</a>
               </article>
               <article class="article-card">
                 <p class="article-card-tag">Drenaje en restaurantes</p>
                 <h3>¿Por qué huele mal mi restaurante aunque limpie todos los días?</h3>
                 <p>Aprende a identificar si el olor viene del drenaje, coladeras, tuberías o acumulación de grasa en la cocina.</p>
-                <a href="por-que-huele-mal-mi-restaurante-drenaje.html" target="_blank" rel="noreferrer noopener">Leer artículo</a>
+                <a href="/blog/por-que-huele-mal-mi-restaurante-drenaje/">Leer artículo</a>
               </article>
             </div>
           </div>
@@ -371,8 +394,8 @@
 
     <footer class="site-footer"><div class="site-footer-shell"><div class="site-footer-brand"><img src="/cyc-logo.png" alt="CyC del Sureste" /><p>Soluciones especializadas en tratamiento de agua, mantenimiento técnico y trabajo en campo con Blue Drop y Green Drone.</p></div><div class="site-footer-column"><p class="site-footer-title">Navegación</p><a href="index.html">Inicio</a><a href="#soluciones">Soluciones</a><a href="#blog">Artículos</a><a href="#faq">Faq</a></div><div class="site-footer-column"><p class="site-footer-title">Servicios</p><a href="bluedrop2.html">Blue Drop</a><a href="greendrone.html">Green Drone</a><a href="bluedrop2.html">Trampas de grasa</a><a href="greendrone.html">Agricultura de precisión</a></div><div class="site-footer-column"><p class="site-footer-title">Contacto</p><a href="tel:+529999127589">+52 999 912 7589</a><a href="mailto:administracion@cycdelsureste.com">administracion@cycdelsureste.com</a><a href="https://wa.me/529993577687?text=Hola,%20quiero%20informacion%20sobre%20CyC%20del%20Sureste" target="_blank" rel="noreferrer">WhatsApp: +52 999 357 7687</a><a href="contacto.html">Solicitar asesoría</a></div></div><div class="site-footer-bottom"><p>© 2026 CyC del Sureste. Todos los derechos reservados.</p></div></footer>
 
-    <script type="module" src="/page-loader.js"></script>
-    <script type="module" src="/script.js"></script>
+    <script src="../scripts/page-loader.js"></script>
+    <script src="../scripts/script.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const faqItems = document.querySelectorAll(".faq-item");
