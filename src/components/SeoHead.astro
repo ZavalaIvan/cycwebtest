@@ -1,0 +1,66 @@
+---
+import {
+  absoluteUrl,
+  organizationSchema,
+  SITE,
+  websiteSchema
+} from "../lib/seo";
+import GoogleTagManagerHead from "./GoogleTagManagerHead.astro";
+
+type SchemaObject = Record<string, unknown>;
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  canonicalPath?: string;
+  image?: string;
+  type?: "website" | "article";
+  noindex?: boolean;
+  structuredData?: SchemaObject | SchemaObject[];
+}
+
+const {
+  title,
+  description,
+  path,
+  canonicalPath,
+  image = SITE.defaultImage,
+  type = "website",
+  noindex = false,
+  structuredData = []
+} = Astro.props;
+
+const canonicalUrl = absoluteUrl(canonicalPath ?? path);
+const imageUrl = absoluteUrl(image);
+const robots = noindex ? "noindex, nofollow, noarchive" : "index, follow";
+const schemaItems = [
+  organizationSchema,
+  websiteSchema,
+  ...(Array.isArray(structuredData) ? structuredData : [structuredData])
+].filter(Boolean);
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": schemaItems
+};
+---
+
+<GoogleTagManagerHead />
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta name="robots" content={robots} />
+<link rel="canonical" href={canonicalUrl} />
+<link rel="icon" href="/logo.png" />
+<meta name="theme-color" content="#0d5570" />
+<meta property="og:locale" content="es_MX" />
+<meta property="og:site_name" content={SITE.name} />
+<meta property="og:type" content={type} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:image" content={imageUrl} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={imageUrl} />
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>

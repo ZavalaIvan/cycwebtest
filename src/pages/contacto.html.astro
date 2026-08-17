@@ -1,0 +1,393 @@
+﻿---
+import "../styles/page-loader.css";
+import "../styles/contacto.css";
+import SeoHead from "../components/SeoHead.astro";
+import GoogleTagManagerNoScript from "../components/GoogleTagManagerNoScript.astro";
+import { buildBreadcrumbSchema, buildWebPageSchema } from "../lib/seo";
+
+const title = "Contacto | CyC del Sureste, Blue Drop y Green Drone";
+const description =
+  "Contacta a CyC del Sureste para diagnóstico de Blue Drop, Green Drone, tratamiento de agua, control de olores, drenajes y agricultura de precisión.";
+const path = "/contacto.html";
+const structuredData = [
+  buildWebPageSchema({ name: title, description, path, pageType: "ContactPage" }),
+  buildBreadcrumbSchema([
+    { name: "Inicio", path: "/" },
+    { name: "Contacto", path }
+  ])
+];
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <SeoHead
+      title={title}
+      description={description}
+      path={path}
+      image="/cyc-logo.png"
+      structuredData={structuredData}
+    />
+    <script is:inline src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+  </head>
+  <body>
+    <GoogleTagManagerNoScript />
+    <div class="page-loader" data-page-loader aria-hidden="true">
+      <div class="page-loader-panel">
+        <div class="page-loader-mark">
+          <img src="/cyc-logo.png" alt="" />
+          <span>CyC del Sureste</span>
+        </div>
+        <p class="page-loader-copy">Cargando contacto tecnico y comercial para tu evaluacion.</p>
+        <div class="page-loader-bar"><span></span></div>
+        <p class="page-loader-meta">Preparando experiencia</p>
+      </div>
+    </div>
+
+    <a
+      class="sticky-whatsapp"
+      id="floating-whatsapp"
+      href="https://wa.me/529993577687?text=Hola,%20quiero%20informacion%20sobre%20Blue%20Drop"
+      target="_blank"
+      rel="noreferrer"
+      aria-label="Escribir por WhatsApp a Blue Drop"
+    >
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path
+          fill="currentColor"
+          d="M19.11 17.41c-.29-.15-1.7-.84-1.96-.93-.26-.1-.45-.15-.64.15-.19.29-.74.93-.91 1.12-.17.19-.34.22-.63.08-.29-.15-1.24-.46-2.35-1.47-.87-.78-1.45-1.74-1.62-2.03-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.19-.29.29-.49.1-.19.05-.37-.02-.51-.07-.15-.64-1.55-.88-2.12-.23-.55-.47-.48-.64-.49h-.55c-.19 0-.51.07-.78.37-.26.29-1 1-.98 2.44.02 1.45 1.05 2.85 1.2 3.05.15.19 2.05 3.12 5.06 4.26 3.01 1.14 3.01.76 3.55.71.54-.05 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.08-.13-.26-.19-.55-.34Z"
+        />
+        <path
+          fill="currentColor"
+          d="M16.02 3.2c-6.97 0-12.61 5.63-12.61 12.58 0 2.22.58 4.39 1.67 6.29L3.2 28.8l6.92-1.81a12.67 12.67 0 0 0 5.9 1.5h.01c6.96 0 12.62-5.64 12.62-12.59 0-3.37-1.31-6.54-3.69-8.92A12.53 12.53 0 0 0 16.02 3.2Zm0 23.16h-.01a10.53 10.53 0 0 1-5.37-1.47l-.39-.23-4.11 1.08 1.1-4-.25-.41a10.45 10.45 0 0 1-1.61-5.56c0-5.79 4.75-10.5 10.61-10.5 2.81 0 5.45 1.09 7.44 3.07a10.4 10.4 0 0 1 3.09 7.43c0 5.79-4.77 10.59-10.5 10.59Z"
+        />
+      </svg>
+    </a>
+
+    <nav class="site-nav">
+      <div class="nav-shell">
+        <a class="nav-brand" href="/index.html" aria-label="CyC del Sureste">
+          <img src="/cyc-logo.png" alt="CyC del Sureste" />
+        </a>
+
+        <div class="nav-links" aria-label="Navegacion principal">
+          <a href="/index.html">Inicio</a>
+          <a href="/blog/">Blog</a>
+          <a class="is-current" href="/contacto.html">Contacto</a>
+        </div>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Abrir menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <div class="mega-menu-overlay">
+        <div class="mega-menu-shell">
+          <div class="mega-menu-header">
+            <button class="mega-menu-close" type="button" aria-label="Cerrar menu">Cerrar</button>
+          </div>
+
+          <div class="mega-menu-nav">
+            <a class="nav-link" href="/index.html">Inicio</a>
+            <a class="nav-link" href="/blog/">Blog</a>
+            <a class="nav-link is-current" href="/contacto.html">Contacto</a>
+          </div>
+
+          <div class="mega-menu-showcase">
+            <div class="mega-menu-side">
+              <p class="mega-menu-side-title">Blue Drop</p>
+              <a href="/bluedrop2.html">Tratamiento de agua</a>
+              <a href="/bluedrop2.html">Manejo de olores</a>
+              <a href="/bluedrop2.html">Trampas de grasa</a>
+              <a href="/bluedrop2.html">Rehabilitacion tecnica</a>
+            </div>
+
+            <a class="mega-menu-card mega-menu-card-blue" href="/bluedrop2.html" aria-label="Ir a Blue Drop">
+              <img src="/cluedrop-logo.png" alt="Blue Drop" />
+            </a>
+
+            <a class="mega-menu-card mega-menu-card-green" href="/greendrone.html" aria-label="Ir a Green Drone">
+              <img src="/greendrone-logo.png" alt="Green Drone" />
+            </a>
+
+            <div class="mega-menu-side">
+              <p class="mega-menu-side-title">Green Drone</p>
+              <a href="/greendrone.html">Aplicacion aerea</a>
+              <a href="/greendrone.html">Fumigacion</a>
+              <a href="/greendrone.html">Monitoreo</a>
+              <a href="/greendrone.html">Cobertura tecnica</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="contact-page">
+      <section class="contact-hero">
+        <div class="shell hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Contáctanos</p>
+            <h1>Hablemos de tu proyecto.</h1>
+            <p class="hero-intro">
+              Elige el servicio sobre el que necesitas ayuda y te conectaremos con el especialista indicado.
+            </p>
+
+            <div class="hero-benefits" aria-label="Beneficios de contacto">
+              <article>
+                <span aria-hidden="true"><iconify-icon icon="mdi:clock-fast" width="24" height="24" aria-hidden="true"></iconify-icon></span>
+                <div>
+                  <strong>Respuesta rápida</strong>
+                  <p>en menos de 24h</p>
+                </div>
+              </article>
+              <article>
+                <span aria-hidden="true"><iconify-icon icon="mdi:account-tie" width="24" height="24" aria-hidden="true"></iconify-icon></span>
+                <div>
+                  <strong>Atención especialista</strong>
+                  <p>por tipo de servicio</p>
+                </div>
+              </article>
+              <article>
+                <span aria-hidden="true"><iconify-icon icon="mdi:shield-lock" width="24" height="24" aria-hidden="true"></iconify-icon></span>
+                <div>
+                  <strong>Confidencialidad</strong>
+                  <p>de tu información</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal" aria-label="Identidades visuales de Blue Drop y Green Drone">
+            <div class="hero-visual-orb"></div>
+            <div class="hero-brand-card">
+              <img src="/cluedrop-logo.png" alt="Blue Drop" />
+              <p>Soluciones para agua</p>
+            </div>
+            <div class="hero-brand-divider" aria-hidden="true"></div>
+            <div class="hero-brand-card">
+              <img src="/greendrone-logo.png" alt="Green Drone" />
+              <p>Soluciones de campo</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section service-selector-section">
+        <div class="shell">
+          <div class="section-heading reveal">
+            <h2>1. Selecciona el servicio sobre el que necesitas ayuda</h2>
+          </div>
+
+          <div class="service-selector-grid" role="radiogroup" aria-label="Selector de servicio">
+            <button
+              class="service-option reveal is-selected"
+              type="button"
+              role="radio"
+              aria-checked="true"
+              data-service="blue-drop"
+            >
+              <span class="service-check" aria-hidden="true">✓</span>
+              <img src="/cluedrop-logo.png" alt="" />
+              <div>
+                <strong>Blue Drop</strong>
+                <p>Soluciones para agua, manejo de olores y mantenimiento de tuberías.</p>
+              </div>
+            </button>
+
+            <button
+              class="service-option reveal"
+              type="button"
+              role="radio"
+              aria-checked="false"
+              data-service="green-drone"
+            >
+              <span class="service-check" aria-hidden="true">✓</span>
+              <img src="/greendrone-logo.png" alt="" />
+              <div>
+                <strong>Green Drone</strong>
+                <p>Soluciones aéreas para el campo, fumigación, monitoreo y más.</p>
+              </div>
+            </button>
+
+            <button
+              class="service-option reveal"
+              type="button"
+              role="radio"
+              aria-checked="false"
+              data-service="integral"
+            >
+              <span class="service-check" aria-hidden="true">✓</span>
+              <img src="/cyc-logo.png" alt="" />
+              <div>
+                <strong>Solución integral</strong>
+                <p>Combinamos Blue Drop y Green Drone para ofrecerte una solución completa.</p>
+              </div>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section channels-section">
+        <div class="shell">
+          <div class="section-heading reveal">
+            <h2>2. Elige tu canal de contacto</h2>
+            <p class="dynamic-context">
+              Te pondremos en contacto con un especialista de <span data-service-label>Blue Drop</span>.
+            </p>
+          </div>
+
+          <div class="channel-grid">
+            <article class="channel-card reveal">
+              <div class="channel-icon" aria-hidden="true"><iconify-icon icon="mdi:whatsapp" width="24" height="24" aria-hidden="true"></iconify-icon></div>
+              <strong>WhatsApp</strong>
+              <p>La forma más rápida de contactarnos.</p>
+              <a
+                class="channel-button primary"
+                data-whatsapp-link
+                href="https://wa.me/529993577687?text=Hola,%20quiero%20informacion%20sobre%20Blue%20Drop"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Escribir por WhatsApp
+              </a>
+              <small data-whatsapp-display>+52 999 357 7687</small>
+            </article>
+
+            <article class="channel-card reveal">
+              <div class="channel-icon" aria-hidden="true"><iconify-icon icon="mdi:phone" width="24" height="24" aria-hidden="true"></iconify-icon></div>
+              <strong>Llamada telefónica</strong>
+              <p>Llámanos directamente y conversemos sobre tu proyecto.</p>
+              <a class="channel-button secondary" data-phone-link href="tel:+529993577687">+52 999 357 7687</a>
+              <small data-phone-display>+52 999 357 7687</small>
+            </article>
+
+            <article class="channel-card reveal">
+              <div class="channel-icon" aria-hidden="true"><iconify-icon icon="mdi:email" width="24" height="24" aria-hidden="true"></iconify-icon></div>
+              <strong>Correo electrónico</strong>
+              <p>Envíanos un correo con los detalles de tu proyecto.</p>
+              <a class="channel-button secondary" data-email-link href="mailto:bluedrop@cycdelsureste.com">bluedrop@cycdelsureste.com</a>
+              <small>Atención comercial y técnica</small>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section form-section" id="formulario">
+        <div class="shell form-wrap reveal">
+          <div class="form-info">
+            <p class="eyebrow">Formulario</p>
+            <h2>Cuéntanos sobre tu proyecto</h2>
+            <p>
+              Completa el formulario y te contactaremos para brindarte la mejor solución.
+            </p>
+
+            <ul class="form-benefits">
+              <li>Diagnóstico técnico</li>
+              <li>Soluciones personalizadas</li>
+              <li>Acompañamiento integral</li>
+            </ul>
+          </div>
+
+          <form class="contact-form" id="contact-form">
+            <div class="form-grid">
+              <label>
+                Nombre completo
+                <input type="text" name="nombre" placeholder="Tu nombre" />
+              </label>
+
+              <label>
+                Teléfono / WhatsApp
+                <input type="tel" name="telefono" placeholder="Tu teléfono" />
+              </label>
+
+              <label>
+                Tipo de servicio
+                <select name="servicio" id="service-select">
+                  <option value="blue-drop">Blue Drop</option>
+                  <option value="green-drone">Green Drone</option>
+                  <option value="integral">Solución integral</option>
+                </select>
+              </label>
+
+              <label>
+                Ciudad o zona
+                <input type="text" name="ciudad" placeholder="Selecciona tu ciudad" />
+              </label>
+            </div>
+
+            <label>
+              Mensaje / descripción del proyecto
+              <textarea
+                name="mensaje"
+                id="project-message"
+                rows="6"
+                placeholder="Describe brevemente el problema: lago, tubería, trampa de grasa, mal olor, agua contaminada o sistema afectado..."
+              ></textarea>
+            </label>
+
+            <button class="form-submit" type="submit">Enviar mensaje</button>
+            <p class="form-privacy">Tu información está protegida y no será compartida.</p>
+          </form>
+        </div>
+      </section>
+
+      <section class="section coverage-section">
+        <div class="shell coverage-band reveal">
+          <h2>¿Dónde operamos?</h2>
+          <p>Brindamos soluciones técnicas en todo el Sureste de México.</p>
+
+          <div class="coverage-list" aria-label="Zona de cobertura">
+            <span>Mérida, Yucatán</span>
+            <span>Yucatán</span>
+            <span>Campeche</span>
+            <span>Quintana Roo</span>
+            <span>Tabasco</span>
+            <span>Chiapas</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-grid">
+        <div class="footer-brand">
+          <img class="footer-logo" src="/cyc-logo.png" alt="CyC del Sureste" />
+          <p>
+            Soluciones técnicas para tratamiento de agua, manejo de residuos, aplicaciones aéreas y operaciones de campo con Blue Drop y Green Drone.
+          </p>
+        </div>
+
+        <div>
+          <p class="footer-title">Navegación</p>
+          <a href="/index.html">Inicio</a>
+          <a href="/index.html">Servicios</a>
+          <a href="/blog/">Blog</a>
+          <a href="/index.html">Nosotros</a>
+          <a href="/contacto.html">Contacto</a>
+        </div>
+
+        <div>
+          <p class="footer-title">Contacto</p>
+          <a href="tel:+529993577687">+52 999 357 7687 (Blue Drop)</a>
+          <a href="https://wa.me/529993577687" target="_blank" rel="noreferrer">WhatsApp Blue Drop</a>
+          <a href="mailto:bluedrop@cycdelsureste.com">bluedrop@cycdelsureste.com</a>
+          <a href="tel:+529811686386">+52 981 168 6386 (Green Drone)</a>
+          <a href="https://wa.me/529811686386" target="_blank" rel="noreferrer">WhatsApp Green Drone</a>
+          <a href="mailto:greendrone@cycdelsureste.com">greendrone@cycdelsureste.com</a>
+          <a href="tel:+529999127589">+52 999 912 7589 (CyC del Sureste)</a>
+          <a href="https://wa.me/529993577687" target="_blank" rel="noreferrer">WhatsApp CyC del Sureste</a>
+          <a href="mailto:administracion@cycdelsureste.com">administracion@cycdelsureste.com</a>
+          <span>Lunes a viernes: 9:00 am - 5:30 pm</span>
+          <span>Sábado: 9:00 am - 2:00 pm</span>
+          <span>Mérida, Yucatán, México</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../scripts/page-loader.js"></script>
+    <script src="../scripts/contacto.js"></script>
+  </body>
+</html>

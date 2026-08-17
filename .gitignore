@@ -1,0 +1,11 @@
+node_modules/
+dist/
+dist.zip
+.astro/
+.DS_Store
+Thumbs.db
+.env
+.env.local
+*.mp4
+*.mov
+*.webm

@@ -1,0 +1,328 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W32JZQMP');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Loader Preview | CyC del Sureste</title>
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <meta
+      name="description"
+      content="Vista de prueba para revisar y ajustar la animacion del loader de CyC del Sureste."
+    />
+    <link rel="stylesheet" href="/page-loader.css" />
+    <style>
+      :root {
+        --preview-bg: #f2f7f2;
+        --preview-ink: #173322;
+        --preview-muted: #5b7365;
+        --preview-card: rgba(255, 255, 255, 0.76);
+        --preview-line: rgba(23, 51, 34, 0.1);
+        --preview-green: #1d7f45;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Segoe UI", Arial, sans-serif;
+        color: var(--preview-ink);
+        background:
+          radial-gradient(circle at top left, rgba(29, 127, 69, 0.14), transparent 22rem),
+          radial-gradient(circle at bottom right, rgba(78, 166, 199, 0.14), transparent 24rem),
+          linear-gradient(180deg, #f7fbf6 0%, #edf5eb 100%);
+      }
+
+      .preview-shell {
+        width: min(calc(100% - 2rem), 1120px);
+        margin: 0 auto;
+        padding: 3rem 0 4rem;
+      }
+
+      .preview-header {
+        display: grid;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .preview-eyebrow {
+        margin: 0;
+        color: var(--preview-green);
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .preview-header h1 {
+        margin: 0;
+        font-size: clamp(2.3rem, 5vw, 4.8rem);
+        line-height: 0.96;
+        letter-spacing: -0.05em;
+      }
+
+      .preview-header p {
+        margin: 0;
+        max-width: 42rem;
+        color: var(--preview-muted);
+        font-size: 1.02rem;
+        line-height: 1.7;
+      }
+
+      .preview-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        gap: 1rem;
+      }
+
+      .preview-card,
+      .preview-stage {
+        border: 1px solid rgba(255, 255, 255, 0.65);
+        border-radius: 1.7rem;
+        background: var(--preview-card);
+        backdrop-filter: blur(14px);
+        box-shadow: 0 24px 60px rgba(18, 52, 34, 0.1);
+      }
+
+      .preview-card {
+        padding: 1.5rem;
+      }
+
+      .preview-card h2,
+      .preview-stage h2 {
+        margin: 0 0 0.8rem;
+        font-size: 1.3rem;
+      }
+
+      .preview-card p,
+      .preview-card li,
+      .preview-stage p {
+        color: var(--preview-muted);
+        line-height: 1.65;
+      }
+
+      .preview-card ul {
+        margin: 1rem 0 0;
+        padding-left: 1rem;
+      }
+
+      .preview-controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        margin-top: 1.25rem;
+      }
+
+      .preview-button {
+        min-height: 3rem;
+        padding: 0.85rem 1.15rem;
+        border: 0;
+        border-radius: 999px;
+        background: linear-gradient(135deg, #1d7f45 0%, #2fa25b 100%);
+        color: #fff;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .preview-button.secondary {
+        background: #fff;
+        color: var(--preview-ink);
+        border: 1px solid var(--preview-line);
+      }
+
+      .preview-stage {
+        position: relative;
+        min-height: 34rem;
+        overflow: hidden;
+      }
+
+      .preview-stage-header {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.2rem 1.2rem 0;
+      }
+
+      .preview-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        padding: 0.65rem 0.9rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.84);
+        color: var(--preview-ink);
+        font-size: 0.84rem;
+        font-weight: 700;
+      }
+
+      .preview-badge img {
+        width: 1.6rem;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .preview-stage-copy {
+        position: absolute;
+        inset: auto 1.2rem 1.2rem 1.2rem;
+        z-index: 1;
+        padding: 1.2rem;
+        border-radius: 1.4rem;
+        background: rgba(16, 41, 27, 0.78);
+        color: #fff;
+        backdrop-filter: blur(10px);
+      }
+
+      .preview-stage-copy strong {
+        display: block;
+        font-size: 1.25rem;
+        line-height: 1.1;
+      }
+
+      .preview-stage-copy p {
+        margin: 0.6rem 0 0;
+        color: rgba(255, 255, 255, 0.76);
+      }
+
+      .preview-media {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .preview-loader-trigger {
+        position: fixed;
+        left: 1rem;
+        bottom: 1rem;
+        z-index: 20;
+      }
+
+      @media (max-width: 920px) {
+        .preview-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .preview-stage {
+          min-height: 26rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W32JZQMP"
+    height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="page-loader" data-page-loader aria-hidden="true">
+      <div class="page-loader-panel">
+        <div class="page-loader-mark">
+          <img src="/cyc-logo.png" alt="" />
+          <span>CyC del Sureste</span>
+        </div>
+        <p class="page-loader-copy">Cargando entorno de prueba para revisar la animacion del loader.</p>
+        <div class="page-loader-bar"><span></span></div>
+        <p class="page-loader-meta">Preview del sistema</p>
+      </div>
+    </div>
+
+    <main class="preview-shell">
+      <header class="preview-header">
+        <p class="preview-eyebrow">Page Loader Preview</p>
+        <h1>Visualiza la animacion del loader sin abrir otra landing.</h1>
+        <p>
+          Esta pagina existe solo para pruebas. Puedes abrirla directamente, recargarla o volver a
+          disparar el overlay con el boton inferior para ajustar copy, tiempos, color o sensacion de
+          entrada y salida.
+        </p>
+      </header>
+
+      <section class="preview-grid">
+        <article class="preview-card">
+          <h2>Que puedes validar aqui</h2>
+          <p>
+            El overlay usa exactamente los mismos archivos compartidos del sitio:
+            <code>page-loader.css</code> y <code>page-loader.js</code>.
+          </p>
+          <ul>
+            <li>Entrada al cargar la pagina por completo</li>
+            <li>Salida suave cuando termina el evento <code>load</code></li>
+            <li>Aspecto visual del panel, barra y copy</li>
+            <li>Comportamiento al relanzar manualmente el loader</li>
+          </ul>
+
+          <div class="preview-controls">
+            <button class="preview-button" type="button" id="replay-loader">Reproducir loader</button>
+            <button class="preview-button secondary" type="button" id="reload-page">Recargar pagina</button>
+          </div>
+        </article>
+
+        <article class="preview-stage">
+          <div class="preview-stage-header">
+            <span class="preview-badge">
+              <img src="/cyc-logo.png" alt="" />
+              Vista de prueba
+            </span>
+          </div>
+
+          <img
+            class="preview-media"
+            src="/plantacion-de-semillas-con-drone.jpg"
+            alt="Vista de referencia de Green Drone"
+          />
+
+          <div class="preview-stage-copy">
+            <strong>Escenario visual de fondo</strong>
+            <p>
+              Mantenemos una composicion de prueba para que puedas evaluar si el loader cubre bien la
+              pagina y si la salida se siente limpia antes de interactuar con el contenido.
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <button class="preview-button preview-loader-trigger" type="button" id="quick-loader">
+      Probar animacion otra vez
+    </button>
+
+    <script type="module" src="/page-loader.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const loader = document.querySelector("[data-page-loader]");
+        const replayButton = document.querySelector("#replay-loader");
+        const quickButton = document.querySelector("#quick-loader");
+        const reloadButton = document.querySelector("#reload-page");
+
+        const replayLoader = () => {
+          if (!loader) return;
+
+          document.body.classList.add("page-is-loading");
+          loader.classList.remove("is-hidden");
+          loader.classList.add("is-entering");
+
+          window.setTimeout(() => {
+            loader.classList.add("is-hidden");
+            loader.classList.remove("is-entering");
+            document.body.classList.remove("page-is-loading");
+          }, 1500);
+        };
+
+        replayButton?.addEventListener("click", replayLoader);
+        quickButton?.addEventListener("click", replayLoader);
+        reloadButton?.addEventListener("click", () => window.location.reload());
+      });
+    </script>
+  </body>
+</html>

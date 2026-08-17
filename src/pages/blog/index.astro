@@ -1,0 +1,117 @@
+---
+import { getCollection } from "astro:content";
+import "../../styles/blog-shell.css";
+import SeoHead from "../../components/SeoHead.astro";
+import GoogleTagManagerNoScript from "../../components/GoogleTagManagerNoScript.astro";
+import { buildBreadcrumbSchema, buildWebPageSchema } from "../../lib/seo";
+
+const articles = (await getCollection("blog")).sort((left, right) => left.data.order - right.data.order);
+const title = "Blog | Guías sobre agua, olores y mantenimiento ambiental";
+const description =
+  "Guías técnicas de CyC del Sureste sobre malos olores, trampas de grasa, drenajes, lagos, estanques, Blue Drop y mantenimiento ambiental.";
+const path = "/blog/";
+const structuredData = [
+  buildWebPageSchema({ name: title, description, path, pageType: "CollectionPage" }),
+  {
+    "@type": "Blog",
+    "@id": "https://cycdelsureste.com/blog/#blog",
+    name: title,
+    description,
+    url: "https://cycdelsureste.com/blog/",
+    inLanguage: "es-MX"
+  },
+  buildBreadcrumbSchema([
+    { name: "Inicio", path: "/" },
+    { name: "Blog", path }
+  ])
+];
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <SeoHead
+      title={title}
+      description={description}
+      path={path}
+      image="/img/lagos-sucios-mal-olor.webp"
+      structuredData={structuredData}
+    />
+  </head>
+  <body class="blog-shell">
+    <GoogleTagManagerNoScript />
+    <header class="blog-topbar">
+      <div class="blog-topbar__inner">
+        <a class="blog-topbar__brand" href="/index.html" aria-label="CyC del Sureste">
+          <img src="/cyc-logo.png" alt="CyC del Sureste" />
+          <span class="blog-topbar__eyebrow">Blog técnico</span>
+        </a>
+
+        <nav class="blog-topbar__nav" aria-label="Navegación principal del blog">
+          <a href="/index.html">Inicio</a>
+          <a href="/bluedrop2.html">Blue Drop</a>
+          <a href="/greendrone.html">Green Drone</a>
+          <a href="/contacto.html">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="blog-hub">
+      <div class="blog-hub__inner">
+        <section class="blog-hub__intro">
+          <span class="blog-hub__eyebrow">Blog CyC del Sureste</span>
+          <h1 class="blog-hub__title">Artículos sobre agua, olores, drenajes y mantenimiento ambiental.</h1>
+          <p class="blog-hub__description">
+            Explora guías sobre trampas de grasa, malos olores en restaurantes,
+            recuperación de lagos, drenajes y tratamiento de cuerpos de agua.
+          </p>
+        </section>
+
+        <section class="blog-hub__grid" aria-label="Listado de artículos del blog">
+          {articles.map((article) => (
+            <article class="blog-card">
+              <div class="blog-card__meta">
+                <span class="blog-card__tag">{article.data.category}</span>
+                <span class="blog-card__reading">{article.data.readingTime} de lectura</span>
+              </div>
+
+              <h2>{article.data.title}</h2>
+              <p>{article.data.excerpt}</p>
+
+              <div class="blog-card__actions">
+                <a class="blog-card__primary" href={`/blog/${article.data.canonicalSlug}/`}>Leer artículo</a>
+              </div>
+            </article>
+          ))}
+        </section>
+      </div>
+    </main>
+
+    <footer class="blog-footer">
+      <div class="blog-footer__inner">
+        <div class="blog-footer__brand">
+          <img src="/cyc-logo.png" alt="CyC del Sureste" />
+          <p>
+            Soluciones especializadas en tratamiento de agua, mantenimiento técnico y trabajo en campo
+            con Blue Drop y Green Drone.
+          </p>
+        </div>
+
+        <div class="blog-footer__column">
+          <p class="blog-footer__title">Explorar</p>
+          <a href="/index.html">Inicio</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contacto.html">Contacto</a>
+        </div>
+
+        <div class="blog-footer__column">
+          <p class="blog-footer__title">Soluciones</p>
+          <a href="/bluedrop2.html">Blue Drop</a>
+          <a href="/greendrone.html">Green Drone</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
