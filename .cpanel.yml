@@ -2,5 +2,8 @@
 deployment:
   tasks:
     - export DEPLOYPATH=$HOME/public_html/
+    - export DEPLOYBACKUP="$HOME/cyc-deploy-backups/$(date +%Y%m%d-%H%M%S)"
     - /bin/mkdir -p "$DEPLOYPATH"
-    - if command -v rsync >/dev/null 2>&1; then rsync -a --delete dist/ "$DEPLOYPATH"; else /bin/cp -R dist/. "$DEPLOYPATH"; fi
+    - /bin/mkdir -p "$DEPLOYBACKUP"
+    - /bin/cp -a "$DEPLOYPATH/." "$DEPLOYBACKUP/"
+    - if command -v rsync >/dev/null 2>&1; then rsync -a dist/ "$DEPLOYPATH"; else /bin/cp -R dist/. "$DEPLOYPATH"; fi
