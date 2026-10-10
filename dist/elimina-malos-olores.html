@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-W32JZQMP');
+    </script>
+    <!-- End Google Tag Manager -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#002c3a" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <link rel="canonical" href="https://cycdelsureste.com/elimina-malos-olores.html" />
+    <title>Blue Drop Elimina Olores | Bajo la superficie</title>
+    <meta name="description" content="Descubre qué ocurre bajo la superficie y encuentra la solución Blue Drop para malos olores en baños, cocinas, coladeras y tuberías." />
+    <meta property="og:title" content="Blue Drop | Bajo la superficie" />
+    <meta property="og:description" content="Se ve limpio. Entonces, ¿por qué huele otra vez?" />
+    <meta property="og:image" content="https://cycdelsureste.com/blue-drop-story-v2/01-superficie.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="preload" as="image" href="/blue-drop-story-v2/01-superficie.webp" fetchpriority="high" />
+    <style>:root {
+  --cyan: #08aae8;
+  --teal: #1d86a5;
+  --petrol: #003f52;
+  --deep: #001c27;
+  --ink: #071a21;
+  --mist: #eaf4f5;
+  --white: #f8fbfa;
+  --amber: #b87035;
+  --serif: "Instrument Serif", Georgia, serif;
+  --sans: "DM Sans", Arial, sans-serif;
+  --p: 0;
+  --inside-opacity: 0;
+  --solution-reveal: 0;
+  --solution-edge: 0%;
+  --surface-scale: 1;
+  --inside-scale: 1;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--deep); scroll-behavior: smooth; }
+body { margin: 0; overflow-x: hidden; background: var(--white); color: var(--ink); font-family: var(--sans); }
+a { color: inherit; }
+
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-content: center;
+  gap: 28px;
+  background: var(--deep);
+  color: var(--mist);
+  transition: opacity 0.65s ease, visibility 0.65s ease;
+}
+.preloader.is-ready { opacity: 0; visibility: hidden; }
+.preloader p { margin: 0; font-size: 9px; letter-spacing: 0.28em; text-transform: uppercase; }
+.preloader p span { margin-left: 12px; color: var(--cyan); }
+.preloader-drop {
+  width: 12px;
+  height: 18px;
+  margin: auto;
+  border-radius: 55% 45% 62% 38% / 68% 48% 52% 32%;
+  background: var(--cyan);
+  box-shadow: 0 0 28px rgba(8, 170, 232, 0.65);
+  animation: loader-fall 1.2s cubic-bezier(0.68, 0, 0.3, 1) infinite;
+}
+@keyframes loader-fall { 0% { transform: translateY(-28px) scale(0.75); opacity: 0; } 30% { opacity: 1; } 100% { transform: translateY(28px) scale(1); opacity: 0; } }
+
+.site-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 40;
+  height: 86px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 34px;
+  padding: 0 clamp(22px, 4vw, 66px);
+  color: var(--white);
+  transition: opacity 0.3s ease, background 0.3s ease;
+}
+.site-header.is-quiet { opacity: 0.46; }
+.cyc-brand img { display: block; width: 112px; max-height: 52px; object-fit: contain; filter: brightness(0) invert(1); }
+.header-progress { height: 1px; background: rgba(255, 255, 255, 0.2); overflow: hidden; }
+.header-progress i { display: block; width: calc(var(--p) * 100%); height: 100%; background: var(--cyan); box-shadow: 0 0 12px var(--cyan); }
+.header-cta { padding: 12px 0; border-bottom: 1px solid currentColor; text-decoration: none; text-transform: uppercase; font-size: 9px; letter-spacing: 0.19em; }
+
+.story { height: 480vh; background: var(--deep); }
+.story-stage { position: sticky; top: 0; height: 100svh; overflow: hidden; color: var(--white); background: var(--deep); }
+.scene { position: absolute; inset: 0; overflow: hidden; will-change: transform, opacity, clip-path; }
+.scene img { width: 100%; height: 100%; object-fit: cover; }
+.scene-surface { transform: scale(var(--surface-scale)); transform-origin: 50% 78%; opacity: calc(1 - var(--inside-opacity)); }
+.scene-inside { opacity: var(--inside-opacity); transform: scale(var(--inside-scale)); }
+.scene-solution {
+  opacity: var(--inside-opacity);
+  transform: scale(var(--inside-scale));
+  -webkit-mask-image: linear-gradient(to top, #000 0%, #000 calc(var(--solution-edge) - 10%), rgba(0, 0, 0, 0.76) var(--solution-edge), transparent calc(var(--solution-edge) + 10%), transparent 100%);
+  mask-image: linear-gradient(to top, #000 0%, #000 calc(var(--solution-edge) - 10%), rgba(0, 0, 0, 0.76) var(--solution-edge), transparent calc(var(--solution-edge) + 10%), transparent 100%);
+}
+.story-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0, 18, 27, 0.76) 0%, rgba(0, 18, 27, 0.15) 55%, rgba(0, 18, 27, 0.34) 100%), linear-gradient(0deg, rgba(0, 16, 23, 0.55), transparent 54%); pointer-events: none; }
+.blue-current { position: absolute; left: 50%; top: 14%; width: 2px; height: calc(var(--solution-reveal) * 72%); transform: translateX(-50%); background: linear-gradient(var(--cyan), rgba(8, 170, 232, 0)); box-shadow: 0 0 24px 7px rgba(8, 170, 232, calc(var(--solution-reveal) * 0.35)); opacity: var(--solution-reveal); }
+
+.story-copy { position: absolute; z-index: 4; opacity: 0; transform: translateY(24px); pointer-events: none; will-change: opacity, transform; }
+.story-kicker, .eyebrow { margin: 0; text-transform: uppercase; font-size: 9px; letter-spacing: 0.28em; }
+.story-kicker-blue { color: #85ddff; }
+.story-copy h1, .story-copy h2, .story-outcome h2 { margin: 24px 0; font-family: var(--serif); font-weight: 400; letter-spacing: -0.045em; }
+.story-copy h1 { font-size: clamp(82px, 12vw, 190px); line-height: 0.74; }
+.story-copy h2 { max-width: 980px; font-size: clamp(54px, 7.2vw, 118px); line-height: 0.88; }
+.story-copy em, .story-outcome em { color: #8bdfff; font-weight: 400; }
+.story-copy > p:last-child:not(.story-kicker) { max-width: 540px; font-size: clamp(14px, 1.25vw, 19px); line-height: 1.55; color: rgba(235, 247, 248, 0.8); }
+.story-question { margin: 34px 0 0; font-family: var(--serif); font-size: clamp(26px, 3.5vw, 54px) !important; line-height: 1; color: var(--white) !important; }
+.story-copy-hero { left: clamp(24px, 7.5vw, 130px); top: 23%; }
+.story-copy-right { right: clamp(46px, 8vw, 140px); top: 27%; text-align: right; }
+.story-copy-right p { margin-left: auto; }
+.story-copy-left-bottom { left: clamp(24px, 7.5vw, 130px); bottom: 13%; }
+.story-copy-finale { left: 50%; top: 50%; width: min(1100px, calc(100% - 50px)); transform: translate(-50%, calc(-50% + 24px)); text-align: center; }
+.story-copy-finale h2 { margin-inline: auto; }
+.story-copy-finale p { margin-inline: auto; }
+.story-words { inset: 0; display: grid; place-content: center; gap: 4px; width: 100%; text-align: center; }
+.story-words span { display: block; font-family: var(--serif); font-size: clamp(62px, 9.5vw, 154px); line-height: 0.78; letter-spacing: -0.045em; }
+.story-words span:nth-child(2) { color: #c88b52; }
+.story-words span:nth-child(3) { color: #7ddcff; }
+
+.story-depth { position: absolute; z-index: 5; right: clamp(16px, 3vw, 48px); top: 50%; display: flex; align-items: center; gap: 11px; transform: translateY(-50%); writing-mode: vertical-rl; text-transform: uppercase; font-size: 7px; letter-spacing: 0.23em; color: rgba(255, 255, 255, 0.58); }
+.story-depth i { position: relative; width: 1px; height: 116px; background: rgba(255, 255, 255, 0.22); overflow: hidden; }
+.story-depth b { position: absolute; inset: 0 0 auto; height: calc(var(--p) * 100%); background: var(--cyan); box-shadow: 0 0 9px var(--cyan); }
+.scroll-invite { position: absolute; z-index: 5; left: clamp(24px, 7.5vw, 130px); bottom: 34px; display: flex; align-items: center; gap: 16px; text-transform: uppercase; font-size: 8px; letter-spacing: 0.23em; }
+.scroll-invite i { width: 54px; height: 1px; background: var(--cyan); transform-origin: left; animation: invitation 1.5s ease-in-out infinite; }
+@keyframes invitation { 50% { transform: scaleX(0.32); opacity: 0.5; } }
+
+.story-outcome { min-height: 105vh; display: grid; grid-template-columns: 0.7fr 1.3fr; background: var(--mist); }
+.outcome-mark { display: grid; place-items: center; padding: 8vw; background: #dff1f2; border-right: 1px solid rgba(0, 63, 82, 0.18); }
+.outcome-mark img { width: min(370px, 76%); height: auto; }
+.outcome-copy { display: flex; flex-direction: column; justify-content: center; padding: clamp(60px, 8vw, 130px); }
+.outcome-copy .eyebrow { color: var(--teal); }
+.story-outcome h2 { max-width: 1000px; font-size: clamp(58px, 7.2vw, 116px); line-height: 0.88; }
+.story-outcome h2 em { color: var(--petrol); }
+.outcome-copy > p:not(.eyebrow) { max-width: 650px; color: #38535c; font-size: 17px; line-height: 1.7; }
+.outcome-copy a { align-self: flex-start; margin-top: 34px; padding: 15px 0; border-bottom: 1px solid var(--petrol); color: var(--petrol); text-decoration: none; text-transform: uppercase; font-size: 10px; letter-spacing: 0.17em; }
+.outcome-copy a span { margin-left: 20px; color: var(--cyan); }
+
+.reveal-block { opacity: 0; transform: translateY(34px); transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
+.reveal-block.is-visible { opacity: 1; transform: none; }
+
+.product-decision { padding: clamp(90px, 11vw, 180px) clamp(24px, 7vw, 120px); background: var(--deep); color: var(--white); }
+.decision-heading { display: grid; grid-template-columns: 0.6fr 1.4fr; gap: 6vw; align-items: start; padding-bottom: 8vw; }
+.decision-heading .eyebrow { color: #75d8fb; }
+.decision-heading h2 { margin: 0; font: 400 clamp(62px, 8vw, 132px) / 0.86 var(--serif); letter-spacing: -0.05em; }
+.decision-list { border-top: 1px solid rgba(255, 255, 255, 0.22); }
+.decision-row { display: grid; grid-template-columns: 80px 1.15fr 0.85fr; gap: 4vw; align-items: center; min-height: 390px; padding: 5vw 0; border-bottom: 1px solid rgba(255, 255, 255, 0.22); }
+.decision-index { align-self: start; color: #77cfe9; font-size: 9px; letter-spacing: 0.2em; }
+.decision-signal { margin: 0 0 22px; color: #819aa3; text-transform: uppercase; font-size: 9px; letter-spacing: 0.2em; }
+.decision-row h3 { margin: 0; font: 400 clamp(54px, 6vw, 98px) / 0.83 var(--serif); letter-spacing: -0.045em; }
+.decision-row h3 em { color: #82ddff; font-weight: 400; }
+.decision-row-shock h3 em { color: #2ab0d6; }
+.decision-copy { max-width: 520px; color: #a5b9c0; font-size: 16px; line-height: 1.7; }
+
+.context-lab { display: grid; grid-template-columns: 0.72fr 1.28fr; min-height: 112vh; background: #f1f8f8; }
+.context-heading { padding: clamp(80px, 9vw, 150px) 5vw; border-right: 1px solid rgba(0, 63, 82, 0.16); }
+.context-heading .eyebrow { color: var(--teal); }
+.context-heading h2 { position: sticky; top: 128px; margin: 35px 0 0; font: 400 clamp(64px, 7.4vw, 118px) / 0.86 var(--serif); letter-spacing: -0.05em; }
+.context-interface { display: grid; grid-template-columns: 0.54fr 1.46fr; }
+.context-tabs { display: flex; flex-direction: column; border-right: 1px solid rgba(0, 63, 82, 0.16); }
+.context-tabs button { min-height: 190px; padding: 30px; border: 0; border-bottom: 1px solid rgba(0, 63, 82, 0.16); background: transparent; color: #6d858e; text-align: left; text-transform: uppercase; font: 500 11px/1 var(--sans); letter-spacing: 0.17em; cursor: pointer; transition: color 0.3s, background 0.3s; }
+.context-tabs button span { display: block; margin-bottom: 28px; color: #92aab2; font-size: 8px; }
+.context-tabs button:hover, .context-tabs button:focus-visible, .context-tabs button.is-active { outline: 0; background: #dff1f2; color: var(--petrol); box-shadow: inset 3px 0 var(--cyan); }
+.context-detail { display: flex; flex-direction: column; justify-content: center; padding: clamp(55px, 7vw, 120px); background: radial-gradient(circle at 80% 20%, rgba(8, 170, 232, 0.11), transparent 38%); }
+.context-label { margin: 0; color: var(--teal); font-size: 9px; letter-spacing: 0.22em; }
+.context-detail h3 { margin: 30px 0; font: 400 clamp(50px, 5.4vw, 88px) / 0.91 var(--serif); letter-spacing: -0.045em; }
+.context-detail > p:not(.context-label) { max-width: 600px; color: #506a73; line-height: 1.65; }
+.context-detail ul { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; margin: 42px 0; padding: 0; border-top: 1px solid rgba(0, 63, 82, 0.2); list-style: none; }
+.context-detail li { padding: 18px 8px 18px 0; border-bottom: 1px solid rgba(0, 63, 82, 0.2); text-transform: uppercase; font-size: 9px; letter-spacing: 0.16em; }
+.context-detail li:nth-child(odd) { border-right: 1px solid rgba(0, 63, 82, 0.2); }
+.context-detail li:nth-child(even) { padding-left: 24px; }
+.context-detail a, .horror-copy a { align-self: flex-start; padding: 15px 0; border-bottom: 1px solid currentColor; color: var(--petrol); text-decoration: none; text-transform: uppercase; font-size: 10px; letter-spacing: 0.17em; }
+.context-detail a span, .horror-copy a span { margin-left: 18px; color: var(--cyan); }
+
+.horror-break { position: relative; min-height: 120vh; display: flex; align-items: center; overflow: hidden; background: #030a0d; color: var(--white); }
+.horror-media { position: absolute; inset: -6%; background: url('/blue-drop-story-v2/02-interior-horror.webp') center / cover no-repeat; transform: scale(1.07); }
+.horror-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(2, 9, 12, 0.92) 0%, rgba(2, 9, 12, 0.64) 45%, rgba(2, 9, 12, 0.14) 100%), linear-gradient(0deg, rgba(2, 9, 12, 0.7), transparent 55%); }
+.horror-copy { position: relative; z-index: 2; width: min(820px, calc(100% - 48px)); margin-left: clamp(24px, 8vw, 140px); padding: 120px 0; }
+.horror-copy .eyebrow { color: #d29a61; }
+.horror-copy h2 { margin: 32px 0; font: 400 clamp(88px, 12vw, 190px) / 0.7 var(--serif); letter-spacing: -0.05em; }
+.horror-copy h2 em { color: #d58b49; font-weight: 400; }
+.horror-copy > p:not(.eyebrow) { max-width: 610px; color: rgba(238, 245, 245, 0.76); font-size: 17px; line-height: 1.7; }
+.horror-copy a { margin-top: 28px; color: var(--white); }
+
+.guidance { display: grid; grid-template-columns: 0.88fr 1.12fr; gap: 8vw; min-height: 100vh; padding: clamp(90px, 11vw, 180px) clamp(24px, 8vw, 140px); background: var(--white); }
+.guidance-intro .eyebrow { color: var(--teal); }
+.guidance-intro h2 { position: sticky; top: 130px; margin: 34px 0; font: 400 clamp(58px, 6.8vw, 110px) / 0.88 var(--serif); letter-spacing: -0.045em; }
+.guidance-steps { margin: 0; padding: 0; border-top: 1px solid rgba(0, 63, 82, 0.23); list-style: none; }
+.guidance-steps li { display: grid; grid-template-columns: 68px 1fr; gap: 24px; padding: 52px 0; border-bottom: 1px solid rgba(0, 63, 82, 0.23); }
+.guidance-steps li > span { color: var(--teal); font-size: 9px; letter-spacing: 0.18em; }
+.guidance-steps h3 { margin: 0 0 14px; font: 400 clamp(36px, 4vw, 60px) / 1 var(--serif); }
+.guidance-steps p { margin: 0; max-width: 520px; color: #536b73; line-height: 1.6; }
+
+.closing { position: relative; min-height: 105vh; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; padding: 100px 24px; background: var(--petrol); color: var(--white); text-align: center; }
+.closing .eyebrow { color: #8bdfff; }
+.closing h2 { position: relative; z-index: 2; margin: 36px 0; font: 400 clamp(76px, 10vw, 164px) / 0.78 var(--serif); letter-spacing: -0.05em; }
+.closing h2 em { color: #89dfff; font-weight: 400; }
+.closing-copy { position: relative; z-index: 2; max-width: 560px; color: #b9d0d6; font-size: 17px; line-height: 1.6; }
+.closing-actions { position: relative; z-index: 2; display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; margin-top: 36px; }
+.closing-actions a { min-width: 210px; padding: 17px 24px; border: 1px solid var(--cyan); background: var(--cyan); color: var(--deep); text-decoration: none; text-transform: uppercase; font-size: 9px; letter-spacing: 0.17em; }
+.closing-actions .closing-secondary { background: transparent; color: var(--white); border-color: rgba(255, 255, 255, 0.45); }
+.closing-orbit { position: absolute; inset: 50% auto auto 50%; width: min(78vw, 920px); aspect-ratio: 1; transform: translate(-50%, -50%); opacity: 0.28; }
+.closing-orbit i { position: absolute; inset: 0; border: 1px solid rgba(127, 222, 255, 0.45); border-radius: 50%; }
+.closing-orbit i:nth-child(2) { inset: 14%; }
+.closing-orbit i:nth-child(3) { inset: 31%; background: radial-gradient(circle, rgba(8, 170, 232, 0.2), transparent 67%); }
+
+.site-footer { display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: center; gap: 30px; padding: 34px clamp(22px, 5vw, 80px); background: var(--deep); color: #708d96; border-top: 1px solid rgba(255, 255, 255, 0.1); text-transform: uppercase; font-size: 8px; letter-spacing: 0.16em; }
+.site-footer img { width: 110px; filter: brightness(0) invert(1); opacity: 0.75; }
+.site-footer p:nth-child(2) { text-align: center; }
+.site-footer p:last-child { text-align: right; }
+
+@media (max-width: 760px) {
+  .site-header { height: 72px; grid-template-columns: auto 1fr auto; gap: 14px; padding-inline: 18px; }
+  .cyc-brand img { width: 82px; }
+  .header-cta { max-width: 108px; text-align: right; font-size: 7px; }
+  .story { height: 430vh; }
+  .scene-surface { transform-origin: 50% 77%; }
+  .scene img { object-position: 50% 50%; }
+  .story-shade { background: linear-gradient(0deg, rgba(0, 18, 27, 0.65), rgba(0, 18, 27, 0.06) 70%); }
+  .story-copy-hero { left: 22px; top: 25%; }
+  .story-copy h1 { font-size: clamp(76px, 25vw, 112px); }
+  .story-copy h2 { font-size: clamp(48px, 14.5vw, 74px); }
+  .story-copy-right { inset: auto 32px 17% 22px; text-align: left; }
+  .story-copy-right p { margin-left: 0; }
+  .story-copy-left-bottom { left: 22px; right: 34px; bottom: 14%; }
+  .story-copy-finale { width: calc(100% - 44px); }
+  .story-words span { font-size: clamp(64px, 20vw, 96px); }
+  .story-depth { right: 10px; }
+  .scroll-invite { left: 22px; }
+  .story-outcome { grid-template-columns: 1fr; }
+  .outcome-mark { min-height: 60vh; border-right: 0; border-bottom: 1px solid rgba(0, 63, 82, 0.18); }
+  .outcome-copy { padding: 84px 24px; }
+  .decision-heading { grid-template-columns: 1fr; gap: 36px; }
+  .decision-row { grid-template-columns: 38px 1fr; min-height: 0; padding: 70px 0; }
+  .decision-copy { grid-column: 2; }
+  .context-lab { grid-template-columns: 1fr; min-height: auto; }
+  .context-heading { padding: 90px 24px 55px; border-right: 0; }
+  .context-heading h2, .guidance-intro h2 { position: static; }
+  .context-interface { grid-template-columns: 1fr; }
+  .context-tabs { display: grid; grid-template-columns: 1fr 1fr; border-right: 0; border-top: 1px solid rgba(0, 63, 82, 0.16); }
+  .context-tabs button { min-height: 120px; border-right: 1px solid rgba(0, 63, 82, 0.16); }
+  .context-detail { min-height: 680px; padding: 70px 24px; }
+  .horror-break { min-height: 105vh; align-items: flex-end; }
+  .horror-media { background-position: 50% 50%; }
+  .horror-shade { background: linear-gradient(0deg, rgba(2, 9, 12, 0.95) 0%, rgba(2, 9, 12, 0.38) 72%, rgba(2, 9, 12, 0.25) 100%); }
+  .horror-copy { margin-left: 24px; padding: 110px 0 70px; }
+  .horror-copy h2 { font-size: clamp(78px, 27vw, 120px); }
+  .guidance { grid-template-columns: 1fr; min-height: auto; padding: 100px 24px; }
+  .closing-actions { flex-direction: column; width: min(100%, 360px); }
+  .closing-actions a { width: 100%; }
+  .site-footer { grid-template-columns: 1fr; text-align: left; }
+  .site-footer p:nth-child(2), .site-footer p:last-child { text-align: left; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .preloader { display: none; }
+  .story { height: auto; }
+  .story-stage { position: relative; min-height: 100svh; }
+  .scene-surface { transform: none !important; opacity: 1 !important; }
+  .scene-inside, .scene-solution, .blue-current, .story-copy:not(.story-copy-hero), .story-depth, .scroll-invite { display: none; }
+  .story-copy-hero { opacity: 1 !important; transform: none !important; }
+  .preloader-drop, .scroll-invite i { animation: none; }
+  .reveal-block { opacity: 1; transform: none; transition: none; }
+}
+</style>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W32JZQMP" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="preloader" data-loader aria-live="polite">
+      <div class="preloader-drop" aria-hidden="true"></div>
+      <p>BAJO LA SUPERFICIE <span data-loader-value>00</span></p>
+    </div>
+
+    <header class="site-header" data-header>
+      <a class="cyc-brand" href="/index.html" aria-label="CyC del Sureste, inicio">
+        <img src="/cyc-logo.png" alt="CyC del Sureste" />
+      </a>
+      <div class="header-progress" aria-hidden="true"><i data-header-progress></i></div>
+      <a class="header-cta" href="https://wa.me/529993577687?text=Hola,%20quiero%20saber%20qu%C3%A9%20Blue%20Drop%20necesito" target="_blank" rel="noreferrer">Diagnosticar mi caso</a>
+    </header>
+
+    <main>
+      <section class="story" data-story aria-label="Un recorrido bajo la superficie">
+        <div class="story-stage">
+          <div class="scene scene-surface" aria-hidden="true">
+            <img src="/blue-drop-story-v2/01-superficie.webp" alt="" />
+          </div>
+          <div class="scene scene-inside" aria-hidden="true">
+            <img src="/blue-drop-story-v2/02-interior-horror.webp" alt="" />
+          </div>
+          <div class="scene scene-solution" aria-hidden="true">
+            <img src="/blue-drop-story-v2/03-transformacion.webp" alt="" />
+          </div>
+          <div class="story-shade" aria-hidden="true"></div>
+          <div class="blue-current" aria-hidden="true"></div>
+
+          <div class="story-copy story-copy-hero" data-chapter data-from="0" data-to="0.19">
+            <p class="story-kicker">Blue Drop / Bajo la superficie</p>
+            <h1>Se ve<br /><em>limpio.</em></h1>
+            <p class="story-question">Entonces, ¿por qué huele otra vez?</p>
+          </div>
+
+          <div class="story-copy story-copy-right" data-chapter data-from="0.16" data-to="0.34">
+            <p class="story-kicker">01 / La señal</p>
+            <h2>El olor sube.<br /><em>El problema se queda abajo.</em></h2>
+          </div>
+
+          <div class="story-copy story-copy-left-bottom" data-chapter data-from="0.31" data-to="0.52">
+            <p class="story-kicker">02 / El origen</p>
+            <h2>Debajo, la historia<br />es <em>otra.</em></h2>
+            <p>Humedad, residuos y tuberías fuera de la vista.</p>
+          </div>
+
+          <div class="story-copy story-words" data-chapter data-from="0.48" data-to="0.66" aria-label="Olor, residuos, tubería">
+            <span>Olor.</span><span>Residuos.</span><span>Tubería.</span>
+          </div>
+
+          <div class="story-copy story-copy-right" data-chapter data-from="0.62" data-to="0.84">
+            <p class="story-kicker story-kicker-blue">03 / La intervención</p>
+            <h2>Blue Drop va más allá<br />de la <em>superficie.</em></h2>
+            <p>Una solución pensada para lo que está debajo.</p>
+          </div>
+
+          <div class="story-copy story-copy-finale" data-chapter data-from="0.81" data-to="1">
+            <p class="story-kicker">04 / De vuelta al control</p>
+            <h2>Lo que no ves<br /><em>también importa.</em></h2>
+            <p>Haz que huela limpio. Desde adentro.</p>
+          </div>
+
+          <div class="story-depth" aria-hidden="true">
+            <span>Superficie</span><i><b data-story-progress></b></i><span>Origen</span>
+          </div>
+          <div class="scroll-invite" aria-hidden="true"><span>Desciende</span><i></i></div>
+        </div>
+      </section>
+
+      <section class="story-outcome" id="producto">
+        <div class="outcome-mark"><img src="/cluedrop-logo.png" alt="Blue Drop" /></div>
+        <div class="outcome-copy">
+          <p class="eyebrow">CyC del Sureste</p>
+          <h2>No es perfume para el ambiente.<br /><em>Es una decisión sobre el origen.</em></h2>
+          <p>Blue Drop está pensado para atender malos olores en baños, cocinas, coladeras y tuberías. Nuestro equipo te ayuda a identificar cuál solución corresponde a tu caso.</p>
+          <a href="https://wa.me/529993577687?text=Hola,%20quiero%20saber%20qu%C3%A9%20Blue%20Drop%20necesito" target="_blank" rel="noreferrer">¿Cuál Blue Drop necesito? <span>↗</span></a>
+        </div>
+      </section>
+
+      <section class="product-decision" aria-labelledby="decision-title">
+        <div class="decision-heading reveal-block">
+          <p class="eyebrow">Dos problemas. Dos respuestas.</p>
+          <h2 id="decision-title">No todo mal olor<br />cuenta la misma historia.</h2>
+        </div>
+        <div class="decision-list">
+          <article class="decision-row reveal-block">
+            <p class="decision-index">01</p>
+            <div>
+              <p class="decision-signal">Cuando el olor vuelve</p>
+              <h3>Blue Drop<br /><em>Elimina Olores</em></h3>
+            </div>
+            <p class="decision-copy">Para baños, cocinas y coladeras donde el olor desagradable reaparece aunque la superficie se limpie.</p>
+          </article>
+          <article class="decision-row decision-row-shock reveal-block">
+            <p class="decision-index">02</p>
+            <div>
+              <p class="decision-signal">Cuando la tubería pide más</p>
+              <h3>Blue Drop<br /><em>Shock</em></h3>
+            </div>
+            <p class="decision-copy">Para situaciones de tubería que requieren una orientación más puntual. CyC del Sureste te indica cuándo considerarlo.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="context-lab" id="usos" aria-labelledby="context-title">
+        <div class="context-heading reveal-block">
+          <p class="eyebrow">El mismo síntoma. Distinta operación.</p>
+          <h2 id="context-title">¿Dónde vuelve<br />el olor?</h2>
+        </div>
+        <div class="context-interface reveal-block">
+          <div class="context-tabs" role="tablist" aria-label="Tipo de espacio">
+            <button class="is-active" type="button" role="tab" aria-selected="true" data-context="casa"><span>01</span>Casa</button>
+            <button type="button" role="tab" aria-selected="false" data-context="restaurante"><span>02</span>Restaurante</button>
+          </div>
+          <div class="context-detail" role="tabpanel" aria-live="polite">
+            <p class="context-label" data-context-label>EN CASA</p>
+            <h3 data-context-title>Tu baño se ve limpio.<br />La coladera dice otra cosa.</h3>
+            <p data-context-copy>Baños, cocinas, lavabos y coladeras pueden conservar el problema debajo de lo visible.</p>
+            <ul data-context-list>
+              <li>Baño</li><li>Cocina</li><li>Coladera</li><li>Tubería</li>
+            </ul>
+            <a href="https://wa.me/529993577687?text=Hola,%20tengo%20un%20problema%20de%20mal%20olor%20en%20casa" data-context-cta target="_blank" rel="noreferrer">Contar mi caso <span>↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="horror-break" aria-label="El problema bajo la coladera">
+        <div class="horror-media" aria-hidden="true"></div>
+        <div class="horror-shade" aria-hidden="true"></div>
+        <div class="horror-copy reveal-block">
+          <p class="eyebrow">Cuando deja de estar escondido</p>
+          <h2>Olor.<br />Grasa.<br /><em>Plagas.</em></h2>
+          <p>Si algo está subiendo por la coladera, ignorarlo no hace que desaparezca. Blue Drop puede formar parte de una estrategia para atender el origen y recuperar el control.</p>
+          <a href="https://wa.me/529993577687?text=Hola,%20tengo%20mal%20olor%20o%20plagas%20que%20parecen%20venir%20de%20la%20coladera" target="_blank" rel="noreferrer">Quiero atenderlo <span>↗</span></a>
+        </div>
+      </section>
+
+      <section class="guidance" aria-labelledby="guidance-title">
+        <div class="guidance-intro reveal-block">
+          <p class="eyebrow">Sin adivinar</p>
+          <h2 id="guidance-title">Primero entendemos<br />qué está pasando.</h2>
+        </div>
+        <ol class="guidance-steps">
+          <li class="reveal-block"><span>01</span><div><h3>Ubicamos la señal</h3><p>Baño, cocina, coladera o tubería. Casa o restaurante.</p></div></li>
+          <li class="reveal-block"><span>02</span><div><h3>Orientamos el producto</h3><p>Elimina Olores o Blue Drop Shock, según el tipo de problema.</p></div></li>
+          <li class="reveal-block"><span>03</span><div><h3>Definimos la aplicación</h3><p>La indicación exacta se confirma con el equipo de CyC del Sureste.</p></div></li>
+        </ol>
+      </section>
+
+      <section class="closing" id="contacto">
+        <div class="closing-orbit" aria-hidden="true"><i></i><i></i><i></i></div>
+        <p class="eyebrow reveal-block">Blue Drop / CyC del Sureste</p>
+        <h2 class="reveal-block">Que huela limpio.<br /><em>Desde adentro.</em></h2>
+        <p class="closing-copy reveal-block">Cuéntanos dónde aparece el olor. Te ayudamos a elegir el siguiente paso.</p>
+        <div class="closing-actions reveal-block">
+          <a href="https://wa.me/529993577687?text=Hola,%20quiero%20Blue%20Drop%20para%20eliminar%20malos%20olores" target="_blank" rel="noreferrer">Quiero Blue Drop</a>
+          <a class="closing-secondary" href="/contacto.html">Hablar con un especialista</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a href="/index.html"><img src="/cyc-logo.png" alt="CyC del Sureste" /></a>
+      <p>Blue Drop · Soluciones para malos olores, coladeras y tuberías</p>
+      <p>© 2026 CyC del Sureste</p>
+    </footer>
+
+    
+  </body>
+</html>
+<script>const story = document.querySelector('[data-story]');
+const stage = story?.querySelector('.story-stage');
+const header = document.querySelector('[data-header]');
+const loader = document.querySelector('[data-loader]');
+const loaderValue = document.querySelector('[data-loader-value]');
+const chapters = [...document.querySelectorAll('[data-chapter]')];
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const imageUrls = [
+  '/blue-drop-story-v2/01-superficie.webp',
+  '/blue-drop-story-v2/02-interior-horror.webp',
+  '/blue-drop-story-v2/03-transformacion.webp'
+];
+
+const clamp = (value, min = 0, max = 1) => Math.min(max, Math.max(min, value));
+const map = (value, start, end) => clamp((value - start) / (end - start));
+const smooth = value => value * value * (3 - 2 * value);
+
+function chapterOpacity(progress, from, to) {
+  const edge = Math.min(0.055, (to - from) * 0.28);
+  const enter = from <= 0 ? 1 : smooth(map(progress, from, from + edge));
+  const exit = to >= 1 ? 1 : 1 - smooth(map(progress, to - edge, to));
+  return clamp(Math.min(enter, exit));
+}
+
+function render() {
+  if (!story || !stage || reducedMotion) return;
+  const rect = story.getBoundingClientRect();
+  const travel = Math.max(story.offsetHeight - innerHeight, 1);
+  const progress = clamp(-rect.top / travel);
+  const descent = smooth(map(progress, 0.05, 0.34));
+  const inside = smooth(map(progress, 0.22, 0.38));
+  const reveal = smooth(map(progress, 0.61, 0.87));
+
+  stage.style.setProperty('--p', progress.toFixed(4));
+  stage.style.setProperty('--surface-scale', (1 + descent * 4.1).toFixed(4));
+  stage.style.setProperty('--inside-opacity', inside.toFixed(4));
+  stage.style.setProperty('--inside-scale', (1 + map(progress, 0.34, 1) * 0.22).toFixed(4));
+  stage.style.setProperty('--solution-reveal', reveal.toFixed(4));
+  stage.style.setProperty('--solution-edge', `${(reveal * 100).toFixed(2)}%`);
+
+  chapters.forEach(chapter => {
+    const from = Number(chapter.dataset.from);
+    const to = Number(chapter.dataset.to);
+    const opacity = chapterOpacity(progress, from, to);
+    chapter.style.opacity = opacity.toFixed(3);
+    if (chapter.classList.contains('story-copy-finale')) {
+      chapter.style.transform = `translate(-50%, calc(-50% + ${(1 - opacity) * 24}px))`;
+    } else {
+      chapter.style.transform = `translateY(${(1 - opacity) * 24}px)`;
+    }
+  });
+
+  header?.classList.toggle('is-quiet', progress > 0.19 && progress < 0.82);
+}
+
+let scheduled = false;
+function scheduleRender() {
+  if (scheduled) return;
+  scheduled = true;
+  requestAnimationFrame(() => {
+    render();
+    scheduled = false;
+  });
+}
+
+async function loadImages() {
+  let loaded = 0;
+  await Promise.all(imageUrls.map(url => new Promise(resolve => {
+    const image = new Image();
+    image.decoding = 'async';
+    image.onload = image.onerror = () => {
+      loaded += 1;
+      if (loaderValue) loaderValue.textContent = String(Math.round((loaded / imageUrls.length) * 100)).padStart(2, '0');
+      resolve();
+    };
+    image.src = url;
+  })));
+  loader?.classList.add('is-ready');
+  document.body.classList.add('is-ready');
+  render();
+}
+
+addEventListener('scroll', scheduleRender, { passive: true });
+addEventListener('resize', scheduleRender, { passive: true });
+render();
+loadImages();
+
+const contextData = {
+  casa: {
+    label: 'EN CASA',
+    title: 'Tu baño se ve limpio.\nLa coladera dice otra cosa.',
+    copy: 'Baños, cocinas, lavabos y coladeras pueden conservar el problema debajo de lo visible.',
+    items: ['Baño', 'Cocina', 'Coladera', 'Tubería'],
+    href: 'https://wa.me/529993577687?text=Hola,%20tengo%20un%20problema%20de%20mal%20olor%20en%20casa'
+  },
+  restaurante: {
+    label: 'EN RESTAURANTE',
+    title: 'La cocina cierra.\nLa tubería sigue trabajando.',
+    copy: 'La grasa, el uso continuo y las coladeras pueden convertir un olor escondido en un problema que percibe el cliente.',
+    items: ['Cocina', 'Coladera', 'Tubería', 'Zona de lavado'],
+    href: 'https://wa.me/529993577687?text=Hola,%20tengo%20un%20problema%20de%20mal%20olor%20en%20mi%20restaurante'
+  }
+};
+
+const contextButtons = [...document.querySelectorAll('[data-context]')];
+function selectContext(key) {
+  const data = contextData[key];
+  if (!data) return;
+  document.querySelector('[data-context-label]').textContent = data.label;
+  document.querySelector('[data-context-title]').innerHTML = data.title.replace('\n', '<br />');
+  document.querySelector('[data-context-copy]').textContent = data.copy;
+  document.querySelector('[data-context-list]').innerHTML = data.items.map(item => `<li>${item}</li>`).join('');
+  document.querySelector('[data-context-cta]').href = data.href;
+  contextButtons.forEach(button => {
+    const active = button.dataset.context === key;
+    button.classList.toggle('is-active', active);
+    button.setAttribute('aria-selected', String(active));
+  });
+}
+contextButtons.forEach(button => button.addEventListener('click', () => selectContext(button.dataset.context)));
+
+document.addEventListener('click', (event) => {
+  const target = event.target instanceof Element ? event.target : event.target?.parentElement;
+  const link = target?.closest?.('a[href]');
+  const href = link?.getAttribute('href') || '';
+
+  if (!/^(https?:)?\/\/(?:wa\.me|api\.whatsapp\.com|web\.whatsapp\.com)/i.test(href)) return;
+
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: 'generate_lead',
+    lead_method: 'whatsapp',
+    page_path: window.location.pathname,
+    link_text: (link.textContent || link.getAttribute('aria-label') || '').replace(/\s+/g, ' ').trim().slice(0, 120),
+    link_url: href
+  });
+});
+
+if (!reducedMotion && 'IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('is-visible');
+    });
+  }, { threshold: 0.14 });
+  document.querySelectorAll('.reveal-block').forEach(node => observer.observe(node));
+} else {
+  document.querySelectorAll('.reveal-block').forEach(node => node.classList.add('is-visible'));
+}
+</script>
